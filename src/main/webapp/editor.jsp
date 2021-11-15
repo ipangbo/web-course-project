@@ -7,17 +7,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!DOCTYPE html>
 <html lang="zh-Hans-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <c:url var="base" value="/"></c:url>
-    <base href="${base}">
     <title>编辑文章</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
-          integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous"/>
+          integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
             integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
@@ -51,7 +51,9 @@
             </div>
             <div id="editor-text-area"></div>
         </div>
+        <div id="editor-footer">这里是底线</div>
     </div>
+
     <!-- 1是json -->
     <textarea id="textarea-1" class="fake-textarea"></textarea>
     <!-- 2是html -->
@@ -87,10 +89,9 @@
             <div class="mdui-spinner" id="save-spinner"></div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@wangeditor/editor@latest/dist/index.min.js"></script>
-    <script src="js/editor.js"></script>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@wangeditor/editor@latest/dist/index.min.js"></script>
+<script src="js/editor.js"></script>
 </body>
 
 </html>

@@ -29,7 +29,7 @@ body {
 
 #editor-container {
     width: 850px;
-    margin: 0 auto 150px auto;
+    margin: 0 auto 500px auto;
     background-color: #fff;
     padding: 20px 50px 50px 50px;
     border: 1px solid #e8e8e8;
@@ -78,4 +78,13 @@ body {
     position: absolute;
     right: 26px;
     bottom: 12px;
+}
+
+#editor-footer {
+    text-align: center;
+    margin-top: -86px;
+    color: #bbb;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: .7px;
 }
