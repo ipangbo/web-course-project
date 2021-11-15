@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#box {
+    position: relative;
+    height: 100%;
+}
+
+#content {
+    height: calc(100% - 40px);
+    background-color: rgb(245, 245, 245);
+    overflow-y: auto;
+    position: relative;
+    padding-top: 30px;
+}
+
+.w-e-toolbar {
+    justify-content: center;
+}
+
+#editor-container {
+    width: 850px;
+    margin: 0 auto 150px auto;
+    background-color: #fff;
+    padding: 20px 50px 50px 50px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 12%);
+}
+
+#editor-text-area {
+    min-height: 900px;
+    margin-top: 20px;
+    height: 400px;
+}
+
+#title-container {
+    padding-top: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+#title-container input {
+    font-size: 30px;
+    border: 0;
+    outline: none;
+    width: 100%;
+    line-height: 1;
+}
+
+#title-container #article-author {
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.fake-textarea {
+    display: none;
+}
+
+.mdui-dialog-content p {
+    text-indent: 2em;
+    margin: 8px 0;
+}
+
+.mdui-dialog-actions {
+    position: relative;
+}
+
+#save-spinner {
+    position: absolute;
+    right: 26px;
+    bottom: 12px;
+}
