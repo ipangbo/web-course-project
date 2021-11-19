@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'SourceHanSerifCNBD';
+    src: url("../fonts/SourceHanSerifCN-Bold.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: rgb(23, 28, 97);
+    height: 140px;
+}
+
+.core {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+
+}
+
+.header-logo {
+    background-image: url("../images/nefu-logo.svg");
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.header-name {
+    background-image: url("../images/nefu-name-with-eng-white.svg");
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.major-name {
+    font-family: SourceHanSerifCNBD, serif;
+    display: block;
+    color: white;
+    font-size: 30px;
+    margin-left: 20px;
+}
