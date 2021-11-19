@@ -9,9 +9,17 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
-    background-color: rgb(23, 28, 97);
+    /*background-color: rgb(23, 28, 97);*/
     height: 140px;
+    background: #1e3c72;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .core {
@@ -20,14 +28,14 @@
     display: flex;
     position: relative;
     align-items: center;
-
+    margin: 0 auto;
 }
 
 .header-logo {
     background-image: url("../images/nefu-logo.svg");
     background-repeat: no-repeat;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     margin-left: 30px;
 }
 
@@ -45,4 +53,71 @@
     color: white;
     font-size: 30px;
     margin-left: 20px;
+}
+
+.slogan {
+    width: 184px;
+    height: 82px;
+    background-image: url("../images/slogan.png");
+    background-repeat: no-repeat;
+    margin-left: 130px;
+    background-size: cover;
+}
+
+ul.menu {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+li.menu-button {
+    color: white;
+}
+
+ul.menu a:not(:last-child) {
+    border-right: 1px solid #999;
+}
+.menu a {
+    padding: 15px 12px 5px;
+    transition: background .3s;
+}
+.menu a:hover {
+    background: #56CCF2;
+
+}
+.banner {
+    background-color: #ddd;
+
+}
+#banner-core {
+    display: block;
+}
+.banner-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.banner-list li {
+    margin: 0 20px;
+}
+.banner-list li a {
+    display: block;
+    color: #111;
+    font-weight: 700;
+    padding: 13px 30px;
+    font-size: 18px;
+    transition: background-color .2s;
+}
+
+.banner-list li a:hover {
+    background-color: #bbb;
+    color: #1e3c72;
 }
