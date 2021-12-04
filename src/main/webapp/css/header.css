@@ -14,7 +14,6 @@ a {
 }
 
 .header {
-    /*background-color: rgb(23, 28, 97);*/
     height: 140px;
     background: #1e3c72;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
