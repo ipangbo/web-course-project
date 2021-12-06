@@ -1,33 +1,54 @@
-@font-face {
-    font-family: 'SourceHanSerifCNBD';
-    src: url("../fonts/SourceHanSerifCN-Bold.otf");
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    /* 解决手机显示不全的问题 */
+    min-width: 1200px;
+}
+
+ol,
+ul {
+    /* 去除bootstrap自带缩进 */
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
 a {
     text-decoration: none;
 }
 
+.full-box-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
 .header {
     height: 140px;
-    background: #1e3c72;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #1e3c72;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2a5298, #1e3c72);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2a5298, #1e3c72);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
 .core {
     width: 1200px;
     height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header .core {
     display: flex;
     position: relative;
     align-items: center;
-    margin: 0 auto;
 }
 
 .header-logo {
@@ -47,10 +68,11 @@ a {
 }
 
 .major-name {
-    font-family: SourceHanSerifCNBD, serif;
-    display: block;
-    color: white;
-    font-size: 30px;
+    background-image: url("../images/compsciwhite.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 300px;
+    height: 30px;
     margin-left: 20px;
 }
 
@@ -83,40 +105,104 @@ li.menu-button {
 ul.menu a:not(:last-child) {
     border-right: 1px solid #999;
 }
+
 .menu a {
     padding: 15px 12px 5px;
-    transition: background .3s;
+    transition: background-color .3s;
 }
+
 .menu a:hover {
     background: #56CCF2;
 
 }
+
 .banner {
-    background-color: #ddd;
+    background-color: #eee;
 
 }
+
 #banner-core {
     display: block;
 }
+
 .banner-list {
     list-style: none;
     display: flex;
     justify-content: center;
     width: 100%;
+    height: 47px;
 }
-.banner-list li {
+
+.banner-list>li {
     margin: 0 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.banner-list li a {
+
+.banner-list>li>a {
     display: block;
     color: #111;
     font-weight: 700;
     padding: 13px 30px;
     font-size: 18px;
     transition: background-color .2s;
+    text-align: center;
+    width: 132px;
+    height: 47px;
 }
 
-.banner-list li a:hover {
-    background-color: #bbb;
+.banner-list>li>a:hover {
     color: #1e3c72;
+    background-color: #bbb;
+}
+
+
+
+.banner-list>li>ol {
+    position: absolute;
+    top: 47px;
+    list-style: none;
+    background-color: rgba(80, 80, 80, 0.6);
+    min-width: 132px;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition: transform .1s;
+    transition-delay: .1s;
+    z-index: 2;
+
+}
+
+.banner-list>li:hover ol {
+    display: block;
+    transform: scaleY(1);
+}
+
+.banner-list>li>ol a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 400;
+    transition: background-color .2s;
+    white-space: nowrap;
+}
+
+.banner-list>li>ol a:hover {
+    background-color: #1e3c72;
+}
+
+.banner-list>li:nth-child(1)>ol>li:nth-child(2) a:hover {
+    background-color: rgb(158, 0, 0);
+}
+
+#bgtest {
+    background-image: url("../images/bgtest.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
 }

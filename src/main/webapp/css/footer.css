@@ -1,0 +1,72 @@
+
+#footer-box-1 {
+    height: 328px;
+    background-image: url("../images/bluebg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#footer-box-1>.core {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
+}
+
+#footer-box-1>.core>.footer-logo {
+    height: 211px;
+    width: 306px;
+    background-image: url("../images/footer_logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#footer-box-1>.core>.contact:last-child {
+    margin-right: 50px;
+}
+
+#footer-box-1>.core>.contact dt {
+    margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#footer-box-1>.core>.contact dd {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+#footer-box-1>.core>.contact dd i {
+    color: #1e3c72;
+    margin-right: 10px;
+}
+
+#footer-box-1>.core>.contact dd i+a {
+    color: #000;
+}
+
+#footer-box-1>.core>.contact dl .qr-code {
+    display: flex;
+}
+
+#footer-box-1>.core>.contact dl .qr-code img {
+    width: 115px;
+    margin-right: 15px;
+}
+
+#footer-box-2 {
+    background-color: #2d487c;
+}
+
+#footer-box-2>.core {
+    display: block;
+    text-align: center;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+}
+
+#footer-box-2>.core a {
+    text-decoration: none;
+    color: #fff;
+}
