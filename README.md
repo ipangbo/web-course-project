@@ -55,3 +55,10 @@ Gitee：
 Github：
 
 <a href="https://github.com/ipangbo/web-course-project/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ipangbo/web-course-project"></a>
+
+#### 备注
+本软件前端部分在GitHub Pages实验性更新
+
+仓库：https://github.com/ipangbo/ipangbo.github.io
+
+地址：https://ipangbo.github.io
