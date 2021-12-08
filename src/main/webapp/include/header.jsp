@@ -22,17 +22,17 @@
                 <li>
                     <a href="contents/news/">新闻中心</a>
                     <ol>
-                        <li><a href="contents/news/">综合新闻</a></li>
+                        <li><a href="contents/news/zhxw.jsp">综合新闻</a></li>
                         <li><a href="contents/news/dtsy.jsp">党团声音</a></li>
                         <li><a href="contents/news/xmjx.jsp">新媒精选</a></li>
                     </ol>
                 </li>
                 <li>
-                    <a href="notice.jsp">通知公告</a>
+                    <a href="contents/notice/index.jsp">通知公告</a>
                     <ol>
-                        <li><a href="">教育教学</a></li>
-                        <li><a href="">学术动态</a></li>
-                        <li><a href="">后勤保障</a></li>
+                        <li><a href="contents/notice/jyjx.jsp">教育教学</a></li>
+                        <li><a href="contents/notice/xsdt.jsp">学术动态</a></li>
+                        <li><a href="contents/notice/hqbz.jsp">后勤保障</a></li>
                     </ol>
                 </li>
                 <li>

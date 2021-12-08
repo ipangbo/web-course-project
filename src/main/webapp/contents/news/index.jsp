@@ -44,7 +44,7 @@
     <div class="core">
         <div class="sidebar">
             <ul>
-                <li><a href="contents/news/">综合新闻</a></li>
+                <li><a href="contents/news/zhxw.jsp">综合新闻</a></li>
                 <li><a href="contents/news/dtsy.jsp">党团声音</a></li>
                 <li><a href="contents/news/xmjx.jsp">新媒精选</a></li>
             </ul>
