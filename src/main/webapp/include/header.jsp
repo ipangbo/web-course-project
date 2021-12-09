@@ -36,10 +36,10 @@
                     </ol>
                 </li>
                 <li>
-                    <a href="major.jsp">专业介绍</a>
+                    <a href="contents/major/">专业介绍</a>
                     <ol>
-                        <li><a href="">专业简介</a></li>
-                        <li><a href="">方向简介</a></li>
+                        <li><a href="contents/major/zyjj.jsp">专业简介</a></li>
+                        <li><a href="contents/major/fxjj.jsp">方向简介</a></li>
                     </ol>
                 </li>
                 <li>
