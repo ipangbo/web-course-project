@@ -46,10 +46,10 @@
             <!-- Images -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://tc.qn.ipangbo.cn/image/Carousel20211023shuangjiang.gif" class="d-block w-100" alt="...">
+                    <img src="https://tc.qn.ipangbo.cn/image/Carouselmmexport1636790404614.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://tc.qn.ipangbo.cn/image/Carousel20211107lidong.gif" class="d-block w-100" alt="...">
+                    <img src="https://tc.qn.ipangbo.cn/image/Carousel20211023shuangjiang.gif" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
                     <img src="https://tc.qn.ipangbo.cn/image/Carousel20211107lidong.gif" class="d-block w-100" alt="...">
