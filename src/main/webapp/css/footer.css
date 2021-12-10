@@ -1,7 +1,7 @@
 
 #footer-box-1 {
     height: 328px;
-    background-image: url("../images/bluebg.jpg");
+    background-image: url("https://tc.qn.ipangbo.cn/image/bluebg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -16,7 +16,7 @@
 #footer-box-1>.core>.footer-logo {
     height: 211px;
     width: 306px;
-    background-image: url("../images/footer_logo.svg");
+    background-image: url("https://tc.qn.ipangbo.cn/image/footer_logo.svg");
     background-repeat: no-repeat;
     background-size: contain;
 }

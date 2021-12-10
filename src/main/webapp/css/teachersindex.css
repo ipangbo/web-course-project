@@ -1,7 +1,7 @@
 .background-image {
     height: 300px;
     width: 100%;
-    background-image: url("../images/classroom.jpg");
+    background-image: url("https://tc.qn.ipangbo.cn/image/classroom.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: calc(50% - 46px);
@@ -43,7 +43,7 @@
     border-radius: 10px;
     width: 150px;
     height: 200px;
-    background-image: url("../images/wb.jpg");
+    background-image: url("https://tc.qn.ipangbo.cn/image/wb.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

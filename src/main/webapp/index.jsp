@@ -46,16 +46,16 @@
             <!-- Images -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/Carousel20211023shuangjiang.gif" class="d-block w-100" alt="...">
+                    <img src="https://tc.qn.ipangbo.cn/image/Carousel20211023shuangjiang.gif" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/Carousel20211107lidong.gif" class="d-block w-100" alt="...">
+                    <img src="https://tc.qn.ipangbo.cn/image/Carousel20211107lidong.gif" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/Carouselmmexport1636790404614.jpg" class="d-block w-100" alt="...">
+                    <img src="https://tc.qn.ipangbo.cn/image/Carousel20211107lidong.gif" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/Carousel20211122xiaoxue.gif" class="d-block w-100" alt="...">
+                    <img src="https://tc.qn.ipangbo.cn/image/Carousel20211122xiaoxue.gif" class="d-block w-100" alt="...">
                 </div>
             </div>
             <!-- Controller -->
@@ -113,7 +113,7 @@
             </div>
             <div class="horizon"></div>
             <div class="model-box-content" id="intor-box-content">
-                <img src="images/intro.png" alt="专业介绍图片" id="intro-pic">
+                <img src="https://tc.qn.ipangbo.cn/image/intro.png" alt="专业介绍图片" id="intro-pic">
                 <p>计算机科学与技术系始建于1988年的微机应用专业。1995年在原专业基础上建立了“计算机科学与技术系”。“十一五”期间计算机专业被批准为黑龙江省重点专业建设点和东北林业大学优势专业。2019年通过工程教育专业认证，同年评为黑龙江省一流专业建设点，
                     2020年评为国家级一流本科专业建设点</p>
                 <a href="contents/major/">>>查看更多</a>

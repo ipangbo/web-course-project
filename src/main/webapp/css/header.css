@@ -52,7 +52,7 @@ a {
 }
 
 .header-logo {
-    background-image: url("../images/nefu-logo.svg");
+    background-image: url("https://tc.qn.ipangbo.cn/image/nefu-logo.svg");
     background-repeat: no-repeat;
     width: 90px;
     height: 90px;
@@ -60,7 +60,7 @@ a {
 }
 
 .header-name {
-    background-image: url("../images/nefu-name-with-eng-white.svg");
+    background-image: url("https://tc.qn.ipangbo.cn/image/nefu-name-with-eng-white.svg");
     background-repeat: no-repeat;
     height: 60px;
     width: 200px;
@@ -68,7 +68,7 @@ a {
 }
 
 .major-name {
-    background-image: url("../images/compsciwhite.svg");
+    background-image: url("https://tc.qn.ipangbo.cn/image/compsciwhite.svg");
     background-repeat: no-repeat;
     background-position: center center;
     width: 300px;
@@ -79,7 +79,7 @@ a {
 .slogan {
     width: 184px;
     height: 82px;
-    background-image: url("../images/slogan.png");
+    background-image: url("https://tc.qn.ipangbo.cn/image/slogan.png");
     background-repeat: no-repeat;
     margin-left: 130px;
     background-size: cover;

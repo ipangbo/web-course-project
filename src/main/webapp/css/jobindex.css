@@ -1,7 +1,7 @@
 .background-image {
     height: 300px;
     width: 100%;
-    background-image: url("../images/jobbg.jpg");
+    background-image: url("https://tc.qn.ipangbo.cn/image/jobbg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: calc(50% - 88px);
