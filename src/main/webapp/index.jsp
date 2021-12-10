@@ -76,30 +76,30 @@
             <div class="model-box-header">
                 <i class="mdui-icon material-icons">fiber_new</i>
                 <span class="model-label">计科新闻</span>
-                <span><a href="news.jsp" id="news-more-button">进入新闻网</a></span>
+                <span><a href="contents/news/" id="news-more-button">进入新闻网</a></span>
             </div>
             <div class="horizon"></div>
             <div class="model-box-content" id="news-box-content">
                 <ul>
                     <li>
-                        <a href="news/article?aid=1" class="article-title">关于组织收看《2017 年度 CCCV
+                        <a href="contents/news/article?aid=1" class="article-title">关于组织收看《2017 年度 CCCV
                             “心血管OCT易损斑块识别”人工智能专题竞赛》的通知</a>
                         <span class="article-time">2021-11-24</span>
                     </li>
                     <li>
-                        <a href="news/article?aid=1" class="article-title">关于开除庞石薄等一名同学的通知</a>
+                        <a href="contents/news/article?aid=1" class="article-title">关于开除庞石薄等一名同学的通知</a>
                         <span class="article-time">2021-11-24</span>
                     </li>
                     <li>
-                        <a href="news/article?aid=1" class="article-title">诚信考试，回家过年——计科专业严抓考试纪律，扎实把好育人关</a>
+                        <a href="contents/news/article?aid=1" class="article-title">诚信考试，回家过年——计科专业严抓考试纪律，扎实把好育人关</a>
                         <span class="article-time">2021-11-24</span>
                     </li>
                     <li>
-                        <a href="news/article?aid=1" class="article-title">计科专业党支部开展“以史为鉴”专题诚信教育活动</a>
+                        <a href="contents/news/article?aid=1" class="article-title">计科专业党支部开展“以史为鉴”专题诚信教育活动</a>
                         <span class="article-time">2021-11-24</span>
                     </li>
                     <li>
-                        <a href="news/article?aid=1" class="article-title">我专业2019级计科四班团支部荣获全国“先进团支部”称号</a>
+                        <a href="contents/news/article?aid=1" class="article-title">我专业2019级计科四班团支部荣获全国“先进团支部”称号</a>
                         <span class="article-time">2021-11-24</span>
                     </li>
                 </ul>
@@ -116,7 +116,7 @@
                 <img src="images/intro.png" alt="专业介绍图片" id="intro-pic">
                 <p>计算机科学与技术系始建于1988年的微机应用专业。1995年在原专业基础上建立了“计算机科学与技术系”。“十一五”期间计算机专业被批准为黑龙江省重点专业建设点和东北林业大学优势专业。2019年通过工程教育专业认证，同年评为黑龙江省一流专业建设点，
                     2020年评为国家级一流本科专业建设点</p>
-                <a href="major.jsp">>>查看更多</a>
+                <a href="contents/major/">>>查看更多</a>
             </div>
         </div>
     </div>
@@ -127,34 +127,34 @@
             <div class="model-box-header">
                 <i class="mdui-icon material-icons">notifications</i>
                 <span class="model-label">通知公告</span>
-                <a href="notice.jsp" id="notice-more-button">>>查看更多</a>
+                <a href="contents/notice/" id="notice-more-button">>>查看更多</a>
             </div>
             <div class="horizon"></div>
             <div class="model-box-content" id="notice-box-content">
                 <ul>
                     <li>
                         <span>[教育教学]</span>
-                        <a href="news/article?aid=1" class="article-title">关于禁止校外外卖的通告</a>
+                        <a href="contents/notice/detail?aid=1" class="article-title">关于禁止校外外卖的通告</a>
                         <span class="article-time">2021-11-24</span>
                     </li>
                     <li>
                         <span>[教育教学]</span>
-                        <a href="news/article?aid=1" class="article-title">关于庞礴等14名预备党员同志转正的公示</a>
+                        <a href="contents/notice/detail?aid=1" class="article-title">关于庞礴等14名预备党员同志转正的公示</a>
                         <span class="article-time">2021-11-24</span>
                     </li>
                     <li>
                         <span>[教育教学]</span>
-                        <a href="news/article?aid=1" class="article-title">《正告东北农业大学贴吧》</a>
+                        <a href="contents/notice/detail?aid=1" class="article-title">《正告东北农业大学贴吧》</a>
                         <span class="article-time">2021-11-24</span>
                     </li>
                     <li>
                         <span>[教育教学]</span>
-                        <a href="news/article?aid=1" class="article-title">关于组织学生退出“林大集市”的通知</a>
+                        <a href="contents/notice/detail?aid=1" class="article-title">关于组织学生退出“林大集市”的通知</a>
                         <span class="article-time">2021-11-24</span>
                     </li>
                     <li>
                         <span>[教育教学]</span>
-                        <a href="news/article?aid=1" class="article-title">关于做好庞礴同学后勤保障工作的要求</a>
+                        <a href="contents/notice/detail?aid=1" class="article-title">关于做好庞礴同学后勤保障工作的要求</a>
                         <span class="article-time">2021-11-24</span>
                     </li>
                 </ul>

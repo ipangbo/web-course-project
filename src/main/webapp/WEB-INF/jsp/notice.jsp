@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/noticeindex.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/article.css">
 </head>
 <body>

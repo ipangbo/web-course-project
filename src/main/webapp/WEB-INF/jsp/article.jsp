@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/newsindex.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/article.css">
 </head>
 <body>
@@ -48,7 +49,7 @@
         <div class="sidebar">
             <ul>
                 <li><a href="contents/news/zhxw.jsp">综合新闻</a></li>
-                <li><a href="contents/news/dtsy.jsp">党团声音</a></li>
+                <li><a href="contents/news/dtsy.jsp" class="red-sidebar-menu-item">党团声音</a></li>
                 <li><a href="contents/news/xmjx.jsp">新媒精选</a></li>
             </ul>
         </div>

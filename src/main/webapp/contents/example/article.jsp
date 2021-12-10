@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/newsindex.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
 <%@include file="../../include/header.jsp"%>

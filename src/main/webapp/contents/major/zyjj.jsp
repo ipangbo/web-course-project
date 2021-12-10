@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/majorindex.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
 <%@include file="../../include/header.jsp" %>
