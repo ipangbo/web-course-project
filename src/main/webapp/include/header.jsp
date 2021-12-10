@@ -31,7 +31,7 @@
                     </ol>
                 </li>
                 <li>
-                    <a href="contents/notice/index.jsp">通知公告</a>
+                    <a href="contents/notice/">通知公告</a>
                     <ol>
                         <li><a href="contents/notice/jyjx.jsp">教育教学</a></li>
                         <li><a href="contents/notice/xsdt.jsp">学术动态</a></li>

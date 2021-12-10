@@ -33,7 +33,10 @@
 </div>
 <div class="pos-bar">
     <div class="core">
-        <div class="pos">您现在的位置：<a href=".">首页</a> >> 教师队伍</div>
+        <div class="pos">
+            <i class="mdui-icon material-icons">local_offer</i>
+            您现在的位置：<a href=".">首页</a> >> 教师队伍
+        </div>
     </div>
 </div>
 <div class="content-box">
