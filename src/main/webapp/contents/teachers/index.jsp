@@ -50,7 +50,7 @@
                 <li>
                     <a href="contents/teachers/wb.jsp">
                         <div class="teacher-card">
-                            <div class="teacher-img"></div>
+                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
@@ -59,7 +59,7 @@
                 <li>
                     <a href="contents/teachers/wb.jsp">
                         <div class="teacher-card">
-                            <div class="teacher-img"></div>
+                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
@@ -68,7 +68,7 @@
                 <li>
                     <a href="contents/teachers/wb.jsp">
                         <div class="teacher-card">
-                            <div class="teacher-img"></div>
+                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
@@ -77,7 +77,7 @@
                 <li>
                     <a href="contents/teachers/wb.jsp">
                         <div class="teacher-card">
-                            <div class="teacher-img"></div>
+                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
@@ -86,7 +86,7 @@
                 <li>
                     <a href="contents/teachers/wb.jsp">
                         <div class="teacher-card">
-                            <div class="teacher-img"></div>
+                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
@@ -95,7 +95,7 @@
                 <li>
                     <a href="contents/teachers/wb.jsp">
                         <div class="teacher-card">
-                            <div class="teacher-img"></div>
+                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
@@ -104,7 +104,7 @@
                 <li>
                     <a href="contents/teachers/wb.jsp">
                         <div class="teacher-card">
-                            <div class="teacher-img"></div>
+                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
@@ -113,7 +113,7 @@
                 <li>
                     <a href="contents/teachers/wb.jsp">
                         <div class="teacher-card">
-                            <div class="teacher-img"></div>
+                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
@@ -122,7 +122,7 @@
                 <li>
                     <a href="contents/teachers/wb.jsp">
                         <div class="teacher-card">
-                            <div class="teacher-img"></div>
+                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
@@ -131,52 +131,7 @@
                 <li>
                     <a href="contents/teachers/wb.jsp">
                         <div class="teacher-card">
-                            <div class="teacher-img"></div>
-                            <h4>王波</h4>
-                            <div class="teacher-title">讲师</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="contents/teachers/wb.jsp">
-                        <div class="teacher-card">
-                            <div class="teacher-img"></div>
-                            <h4>王波</h4>
-                            <div class="teacher-title">讲师</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="contents/teachers/wb.jsp">
-                        <div class="teacher-card">
-                            <div class="teacher-img"></div>
-                            <h4>王波</h4>
-                            <div class="teacher-title">讲师</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="contents/teachers/wb.jsp">
-                        <div class="teacher-card">
-                            <div class="teacher-img"></div>
-                            <h4>王波</h4>
-                            <div class="teacher-title">讲师</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="contents/teachers/wb.jsp">
-                        <div class="teacher-card">
-                            <div class="teacher-img"></div>
-                            <h4>王波</h4>
-                            <div class="teacher-title">讲师</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="contents/teachers/wb.jsp">
-                        <div class="teacher-card">
-                            <div class="teacher-img"></div>
+                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
