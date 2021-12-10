@@ -69,3 +69,10 @@
 .article-box > ul > li > a:hover .teacher-card h4 {
     color: #1e3c72;
 }
+
+.teacher-article-img {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    height: 100%;
+}

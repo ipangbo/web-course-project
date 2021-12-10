@@ -6,8 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="zh-Hans-CN">
 <head>
@@ -19,7 +19,7 @@
     <title>Title</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
-          integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+          integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/newsindex.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/article.css">
 </head>
 <body>
-<%@include file="../../include/header.jsp"%>
+<%@include file="../../include/header.jsp" %>
 <div class="background-image">
     <div class="core indicator-box">
         <div class="indicator">
@@ -77,8 +77,7 @@
                 <p>
                     近年来，随着帽儿山教学区对自然生态环境保护力度的不断加大，野生动物原始生境逐渐恢复，境内野生动物种类、数量正在不断增加，对于维护生态平衡，改善自然环境，促进社会经济持续稳定发展意义重大。
                 </p>
-                <img style="margin: 0 auto;"
-                     src="http://news.nefu.edu.cn/__local/4/DA/F4/C5C8F8C7C5C3942CACD853A71DC_D4D53972_1E96B6.jpg"
+                <img src="http://news.nefu.edu.cn/__local/4/DA/F4/C5C8F8C7C5C3942CACD853A71DC_D4D53972_1E96B6.jpg"
                      alt="图片">
                 <video controls
                        src="http://news.nefu.edu.cn/__local/2/0A/16/D394D8D9C48FEFEC719DFB5F9CF_1E9C5196_7BD5A2.mp4"></video>
@@ -88,7 +87,6 @@
 </div>
 
 
-
-<%@include file="../../include/footer.jsp"%>
+<%@include file="../../include/footer.jsp" %>
 </body>
 </html>

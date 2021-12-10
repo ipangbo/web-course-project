@@ -1,7 +1,10 @@
 <%@ page pageEncoding="UTF-8" %>
 <div id="footer-box-1">
     <div class="core">
-        <div class="footer-logo"></div>
+        <div class="footer-logo">
+            <div class="footer-logo-img"></div>
+            <div class="footer-logo-name"></div>
+        </div>
         <div class="contact">
             <dl>
                 <dt>联系方式</dt>

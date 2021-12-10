@@ -16,9 +16,25 @@
 #footer-box-1>.core>.footer-logo {
     height: 211px;
     width: 306px;
-    background-image: url("https://tc.qn.ipangbo.cn/image/footer_logo.svg");
+}
+
+#footer-box-1>.core>.footer-logo>.footer-logo-img {
+    height: 120px;
+    width: 100%;
+    background-image: url("https://tc.qn.ipangbo.cn/image/nefu-logo.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position-x: center;
+}
+
+#footer-box-1>.core>.footer-logo>.footer-logo-name {
+    height: 56px;
+    width: 100%;
+    margin: 20px 0;
+    background-image: url("https://tc.qn.ipangbo.cn/image/nefu-name-with-eng.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
 }
 
 #footer-box-1>.core>.contact:last-child {

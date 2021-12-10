@@ -50,7 +50,7 @@
         <div class="article-box">
             <ul>
                 <li>
-                    <a href="contents/teachers/wb.jsp">
+                    <a href="contents/teachers/detail?aid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -59,7 +59,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/wb.jsp">
+                    <a href="contents/teachers/detail?aid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -68,7 +68,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/wb.jsp">
+                    <a href="contents/teachers/detail?aid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -77,7 +77,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/wb.jsp">
+                    <a href="contents/teachers/detail?aid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -86,7 +86,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/wb.jsp">
+                    <a href="contents/teachers/detail?aid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -95,7 +95,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/wb.jsp">
+                    <a href="contents/teachers/detail?aid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -104,7 +104,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/wb.jsp">
+                    <a href="contents/teachers/detail?aid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -113,7 +113,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/wb.jsp">
+                    <a href="contents/teachers/detail?aid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -122,7 +122,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/wb.jsp">
+                    <a href="contents/teachers/detail?aid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -131,7 +131,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/wb.jsp">
+                    <a href="contents/teachers/detail?aid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>

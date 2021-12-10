@@ -50,11 +50,15 @@
 .article-content-box>.article-text-box img {
     display: block;
     max-width: 95%;
-    /* margin: 0 auto; */
+     margin: 20px auto;
 
 }
 
 .article-content-box>.article-text-box video {
     max-width: 95%;
     margin: 15px;
+}
+
+.article-content-box>.article-text-box .teacher-article-img {
+    width: 25%;
 }
