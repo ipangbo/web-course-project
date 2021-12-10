@@ -20,10 +20,13 @@
         <div class="core" id="banner-core">
             <ul class="banner-list">
                 <li>
+                    <a href=".">首页</a>
+                </li>
+                <li>
                     <a href="contents/news/">新闻中心</a>
                     <ol>
                         <li><a href="contents/news/zhxw.jsp">综合新闻</a></li>
-                        <li><a href="contents/news/dtsy.jsp">党团声音</a></li>
+                        <li><a href="contents/news/dtsy.jsp" class="red-slide-menu-item">党团声音</a></li>
                         <li><a href="contents/news/xmjx.jsp">新媒精选</a></li>
                     </ol>
                 </li>
@@ -43,27 +46,27 @@
                     </ol>
                 </li>
                 <li>
-                    <a href="teachers.jsp">教师队伍</a>
+                    <a href="contents/teachers/">教师队伍</a>
                     <ol>
-                        <li><a href="">教授</a></li>
-                        <li><a href="">副教授</a></li>
-                        <li><a href="">讲师</a></li>
+                        <li><a href="contents/teachers/js.jsp">教授</a></li>
+                        <li><a href="contents/teachers/fjs.jsp">副教授</a></li>
+                        <li><a href="contents/teachers/jiangshi.jsp">讲师</a></li>
                     </ol>
                 </li>
                 <li>
-                    <a href="labs.jsp">实验室</a>
+                    <a href="contents/lab/">实验室</a>
                     <ol>
-                        <li><a href="">923 创新实验室</a></li>
-                        <li><a href="">925 移动开发实验室</a></li>
-                        <li><a href="">999 天台实验室</a></li>
+                        <li><a href="contents/lab/923.jsp">923 创新实验室</a></li>
+                        <li><a href="contents/lab/925.jsp">925 移动开发实验室</a></li>
+                        <li><a href="contents/lab/999.jsp">999 天台实验室</a></li>
                     </ol>
                 </li>
                 <li>
-                    <a href="job.jsp">就业指南</a>
+                    <a href="contents/job/">就业指南</a>
                     <ol>
-                        <li><a href="">招聘中心</a></li>
-                        <li><a href="">创新创业</a></li>
-                        <li><a href="">国际合作</a></li>
+                        <li><a href="contents/job/zpzx.jsp">招聘中心</a></li>
+                        <li><a href="contents/job/cxcy.jsp">创新创业</a></li>
+                        <li><a href="contents/job/gjhz.jsp">国际合作</a></li>
                     </ol>
                 </li>
             </ul>

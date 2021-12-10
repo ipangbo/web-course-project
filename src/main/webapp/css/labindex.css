@@ -1,0 +1,138 @@
+.background-image {
+    height: 300px;
+    width: 100%;
+    background-image: url("../images/computerlab.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: calc(50% + 30px);
+}
+
+.indicator {
+    width: 250px;
+    height: 150px;
+    background-color: rgba(35, 73, 179, 0.83);
+    position: absolute;
+    top: 195px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.red-indicator {
+    background-color: rgb(187 42 42 / 83%);
+}
+
+.pos-bar {
+    height: 45px;
+    background-color: #ddd;
+}
+
+.pos-bar>.core>.pos {
+    line-height: 45px;
+    margin-left: 300px;
+}
+
+.pos-bar>.core>.pos i {
+    color: #777;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.pos-bar>.core>.pos a {
+    color: #000;
+    transition: color .3s;
+}
+
+.pos-bar>.core>.pos a:hover {
+    color: #1e3c72;
+    text-decoration: underline;
+}
+
+.content-box>.core {
+    display: flex;
+}
+
+.content-box .sidebar {
+    width: 250px;
+    background-color: #eee;
+    height: 100%;
+}
+
+.content-box .sidebar ul {
+    list-style: none;
+}
+
+.content-box .sidebar ul>li {
+    display: block;
+}
+
+.content-box .sidebar ul>li>a {
+    display: block;
+    padding: 25px;
+    color: #444;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    transition: all .1s;
+}
+
+.content-box .sidebar ul>li>a:hover {
+    color: #fff;
+    background-color: rgb(28, 55, 129);
+}
+
+.content-box .article-box {
+    width: 950px;
+}
+
+.article-box h2 {
+    position: relative;
+    padding: 35px 0 35px 60px;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.article-box h2::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 49px;
+    left: 35px;
+    width: 10px;
+    height: 20px;
+    background-color: #1e3c72;
+}
+
+
+.article-text-box {
+    padding: 10px 30px;
+    font-size: 18px;
+}
+
+.article-text-box h4{
+    margin: 20px 0 20px 2px;
+    font-size: 23px;
+    color: #1e3c72;
+}
+
+.article-text-box p {
+    padding-bottom: 15px;
+    text-indent: 2em;
+    line-height: 33px;
+    color: #222;
+}
+
+.article-text-box img {
+    display: block;
+    max-width: 95%;
+    margin: 30px auto;
+    width: 50%;
+
+}
+
+.article-text-box video {
+    max-width: 95%;
+    margin: 15px;
+}

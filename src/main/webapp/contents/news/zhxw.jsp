@@ -16,6 +16,7 @@
     <c:url var="base" value="/"></c:url>
     <base href="${base}">
     <title>东林计科新闻网</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
           integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/header.css">
@@ -45,7 +46,7 @@
         <div class="sidebar">
             <ul>
                 <li><a href="contents/news/zhxw.jsp">综合新闻</a></li>
-                <li><a href="contents/news/dtsy.jsp">党团声音</a></li>
+                <li><a href="contents/news/dtsy.jsp" class="red-sidebar-menu-item">党团声音</a></li>
                 <li><a href="contents/news/xmjx.jsp">新媒精选</a></li>
             </ul>
         </div>

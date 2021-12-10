@@ -196,7 +196,7 @@ ul.menu a:not(:last-child) {
     background-color: #1e3c72;
 }
 
-.banner-list>li:nth-child(1)>ol>li:nth-child(2) a:hover {
+.banner-list>li>ol .red-slide-menu-item:hover {
     background-color: rgb(158, 0, 0);
 }
 

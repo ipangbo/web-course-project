@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: ipang
-  Date: 2021/12/6
-  Time: 15:50
+  Date: 2021/12/10
+  Time: 下午 12:19
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page pageEncoding="UTF-8" %>
@@ -15,20 +15,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <c:url var="base" value="/"></c:url>
     <base href="${base}">
-    <title>东林计科新闻网</title>
+    <title>创新创业</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
-          integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+          integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/newsindex.css">
+    <link rel="stylesheet" href="css/jobindex.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-<%@include file="../../include/header.jsp"%>
+<%@include file="../../include/header.jsp" %>
 <div class="background-image">
     <div class="core indicator-box">
         <div class="indicator">
-            新闻网
+            创新创业
         </div>
     </div>
 </div>
@@ -36,7 +36,7 @@
     <div class="core">
         <div class="pos">
             <i class="mdui-icon material-icons">local_offer</i>
-            您现在的位置：<a href="index.jsp">首页</a> >> 新闻网
+            您现在的位置：<a href="index.jsp">首页</a> >> <a href="contents/job/">就业指南</a> >> 创新创业
         </div>
 
     </div>
@@ -45,15 +45,15 @@
     <div class="core">
         <div class="sidebar">
             <ul>
-                <li><a href="contents/news/zhxw.jsp">综合新闻</a></li>
-                <li><a href="contents/news/dtsy.jsp" class="red-sidebar-menu-item">党团声音</a></li>
-                <li><a href="contents/news/xmjx.jsp">新媒精选</a></li>
+                <li><a href="contents/job/zpzx.jsp">招聘中心</a></li>
+                <li><a href="contents/job/cxcy.jsp">创新创业</a></li>
+                <li><a href="contents/job/gjhz.jsp">国际合作</a></li>
             </ul>
         </div>
         <div class="article-box">
             <ul>
                 <li>
-                    <a href="contents/news/article?aid=1" class="title">关于这是一条新闻的通知的新闻</a>
+                    <a href="article?aid=1" class="title">关于这是一条新闻的通知的新闻</a>
                     <div class="article-detail-box">
                         <div class="article-abstract">
                             为引导广大东林学子深入学习习近平总书记“七一”重要讲话精神，深刻领会和把握讲话的重大意义、丰富内涵、核心要义、实践要求，把学习成果转化为奋进新征程、建功新时代的实际行动，奥林学院指导中心在2021年10月9日星期六16:00于奥林学院401举办政治观摩会。为了响应疫情防控要求，除参演人员及工作人员到场外，另有将近300余人在线上一同参加本次活动。为引导广大东林学子深入学习习近平总书记“七一”重要讲话精神为引导广大东林学子深入学习习近平总书记“七一”重要讲话精神为引导广大东林学子深入学习习近平总书记“七一”重要讲话精神
@@ -65,7 +65,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="contents/news/article?aid=1" class="title">关于这是一条新闻的通知的新闻</a>
+                    <a href="article?aid=1" class="title">关于这是一条新闻的通知的新闻</a>
                     <div class="article-detail-box">
                         <div class="article-abstract">
                             为引导广大东林学子深入学习习近平总书记“七一”重要讲话精神，深刻领会和把握讲话的重大意义、丰富内涵、核心要义、实践要求，把学习成果转化为奋进新征程、建功新时代的实际行动，奥林学院指导中心在2021年10月9日星期六16:00于奥林学院401举办政治观摩会。为了响应疫情防控要求，除参演人员及工作人员到场外，另有将近300余人在线上一同参加本次活动。为引导广大东林学子深入学习习近平总书记“七一”重要讲话精神为引导广大东林学子深入学习习近平总书记“七一”重要讲话精神为引导广大东林学子深入学习习近平总书记“七一”重要讲话精神
@@ -77,7 +77,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="contents/news/article?aid=1" class="title">关于这是一条新闻的通知的新闻</a>
+                    <a href="article?aid=1" class="title">关于这是一条新闻的通知的新闻</a>
                     <div class="article-detail-box">
                         <div class="article-abstract">
                             为引导广大东林学子深入学习习近平总书记“七一”重要讲话精神，深刻领会和把握讲话的重大意义、丰富内涵、核心要义、实践要求，把学习成果转化为奋进新征程、建功新时代的实际行动
@@ -94,7 +94,6 @@
 </div>
 
 
-
-<%@include file="../../include/footer.jsp"%>
+<%@include file="../../include/footer.jsp" %>
 </body>
 </html>
