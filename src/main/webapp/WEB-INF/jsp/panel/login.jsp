@@ -27,10 +27,6 @@
 
         body.bg {
             background-color: #fafafa;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom;
         }
 
         #login-card {
@@ -97,6 +93,8 @@
         </div>
     </form>
 
+    <button class="mdui-fab mdui-fab-fixed mdui-color-blue-grey mdui-ripple" id="login-help-button">?</button>
+
 </div>
 
 
@@ -107,7 +105,9 @@
     $("#drawer-toggle-button").on("click", () => {
         mdui.alert("请先登录");
     });
-
+    $("#login-help-button").on("click", () => {
+        mdui.alert("按照要求，用户名和密码均为root。请尝试输入错误的密码，登录界面带有消息对象回显功能");
+    })
 </script>
 </body>
 

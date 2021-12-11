@@ -103,53 +103,12 @@
         <a href="javascript:;" class="mdui-typo-headline">磅礴新闻网管理系统</a>
         <a href="javascript:;" class="mdui-typo-title">主页</a>
         <div class="mdui-toolbar-spacer"></div>
+        <a href="panel?page=search" class="mdui-btn mdui-btn-icon mdui-ripple" id="editor-save-button"><i
+                class="mdui-icon material-icons">search</i></a>
     </div>
 </div>
 
-<div class="mdui-drawer" id="main-drawer">
-    <div class="mdui-card" id="drawer-inner-card">
-        <div class="mdui-card-media">
-            <img
-                    src="https://cdn.w3cbus.com/mdui/docs~1/static/1ca4b7b2b4b2f2352aeb.jpg"
-            />
-            <div class="mdui-card-media-covered">
-                <div class="mdui-card-primary">
-                    <div class="mdui-card-primary-title">管理员</div>
-                    <div class="mdui-card-primary-subtitle">admin</div>
-                </div>
-            </div>
-        </div>
-        <div class="mdui-card-actions">
-            <button
-                    class="mdui-btn mdui-ripple draw-card-right-button"
-                    id="setting-button"
-            >
-                修改账户
-            </button>
-            <button class="mdui-btn mdui-ripple" id="logout-button">登出</button>
-        </div>
-    </div>
-    <ul class="mdui-list">
-        <li class="mdui-list-item mdui-ripple">
-            <div class="mdui-list-item-content">主页</div>
-            <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
-        </li>
-        <li class="mdui-list-item mdui-ripple">
-            <div class="mdui-list-item-content">新闻管理</div>
-            <i class="mdui-list-item-icon mdui-icon material-icons">fiber_new</i>
-        </li>
-        <li class="mdui-list-item mdui-ripple">
-            <div class="mdui-list-item-content">公告管理</div>
-            <i class="mdui-list-item-icon mdui-icon material-icons"
-            >notifications</i
-            >
-        </li>
-        <li class="mdui-list-item mdui-ripple">
-            <div class="mdui-list-item-content">教师管理</div>
-            <i class="mdui-list-item-icon mdui-icon material-icons">person_add</i>
-        </li>
-    </ul>
-</div>
+<%@ include file="/include/panel-drawer.jsp" %>
 
 <div class="content-box">
     <div class="data-card-box">
@@ -187,36 +146,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
-<script>
-    var $ = mdui.$;
-    var mainDraw = new mdui.Drawer("#main-drawer");
-    $("#drawer-toggle-button").on("click", () => {
-        mainDraw.toggle();
-    });
-    $("#logout-button").on('click', () => {
-        mdui.confirm(
-            "你确认要退出账户吗",
-            "警告",
-            () => {
-                fetch("api/user-transaction?action=logout")
-                    .then((resp) => resp.text())
-                    .then(res => {
-                        // console.log("成功")
-                        location.reload()
-                    })
-                    .catch(error => {
-                        console.log(error)
-                    })
-            },
-            () => {
-            },
-            {
-                confirmText: "确认",
-                cancelText: "取消",
-            }
-        )
-    })
-</script>
+<script src="js/panel-general.js"></script>
 </body>
 
 </html>

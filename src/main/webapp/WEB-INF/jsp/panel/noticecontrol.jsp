@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <c:url var="base" value="/"></c:url>
     <base href="${base}">
-    <title>新闻管理</title>
+    <title>通知管理</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
           integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous"/>
@@ -94,7 +94,6 @@
         .mdui-list .red-list-control-button:hover {
             color: rgb(197, 6, 6);
         }
-
     </style>
 </head>
 <body
@@ -115,12 +114,63 @@
         ><i class="mdui-icon material-icons">menu</i></a
         >
         <a href="javascript:;" class="mdui-typo-headline">磅礴新闻网管理系统</a>
-        <a href="javascript:;" class="mdui-typo-title">新闻管理</a>
+        <a href="javascript:;" class="mdui-typo-title">通知管理</a>
         <div class="mdui-toolbar-spacer"></div>
     </div>
 </div>
 
-<%@ include file="/include/panel-drawer.jsp" %>
+<div class="mdui-drawer" id="main-drawer">
+    <div class="mdui-card" id="drawer-inner-card">
+        <div class="mdui-card-media">
+            <img
+                    src="https://cdn.w3cbus.com/mdui/docs~1/static/1ca4b7b2b4b2f2352aeb.jpg"
+            />
+            <div class="mdui-card-media-covered">
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">管理员</div>
+                    <div class="mdui-card-primary-subtitle">admin</div>
+                </div>
+            </div>
+        </div>
+        <div class="mdui-card-actions">
+            <button
+                    class="mdui-btn mdui-ripple draw-card-right-button"
+                    id="setting-button"
+            >
+                修改账户
+            </button>
+            <button class="mdui-btn mdui-ripple" id="logout-button">登出</button>
+        </div>
+    </div>
+    <ul class="mdui-list">
+        <a href="panel?page=home">
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-content">主页</div>
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+            </li>
+        </a>
+        <a href="panel?page=news">
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-content">新闻管理</div>
+                <i class="mdui-list-item-icon mdui-icon material-icons">fiber_new</i>
+            </li>
+        </a>
+        <a href="panel?page=notice">
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-content">公告管理</div>
+                <i class="mdui-list-item-icon mdui-icon material-icons"
+                >notifications</i
+                >
+            </li>
+        </a>
+        <a href="panel?page=teachers">
+            <li class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-content">教师管理</div>
+                <i class="mdui-list-item-icon mdui-icon material-icons">person_add</i>
+            </li>
+        </a>
+    </ul>
+</div>
 
 <div class="content-box">
     <div class="tools-bar">
@@ -132,23 +182,12 @@
         </a>
     </div>
     <div class="mdui-list">
-        <div class="mdui-list-item">
-            <label class="mdui-checkbox">
+        <label class="mdui-list-item">
+            <div class="mdui-checkbox">
                 <input type="checkbox"/>
                 <i class="mdui-checkbox-icon"></i>
-            </label>
+            </div>
             <div class="mdui-list-item-content">最新的文章</div>
-            <select class="mdui-select article-type-select" mdui-select>
-                <option value="1">综合新闻</option>
-                <option value="2" selected>党团声音</option>
-                <option value="3">新媒精选</option>
-            </select>
-            <a
-                    href="contents/news/article?aid=1"
-                    class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
-            >
-                <i class="mdui-icon material-icons">find_in_page</i>
-            </a>
             <button
                     class="
               mdui-btn mdui-btn-icon mdui-ripple
@@ -166,24 +205,13 @@
             >
                 <i class="mdui-icon material-icons">mode_edit</i>
             </a>
-        </div>
-        <div class="mdui-list-item">
-            <label class="mdui-checkbox">
+        </label>
+        <label class="mdui-list-item">
+            <div class="mdui-checkbox">
                 <input type="checkbox"/>
                 <i class="mdui-checkbox-icon"></i>
-            </label>
+            </div>
             <div class="mdui-list-item-content">最新的文章</div>
-            <select class="mdui-select article-type-select" mdui-select>
-                <option value="1">综合新闻</option>
-                <option value="2" selected>党团声音</option>
-                <option value="3">新媒精选</option>
-            </select>
-            <a
-                    href="contents/news/article?aid=1"
-                    class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
-            >
-                <i class="mdui-icon material-icons">find_in_page</i>
-            </a>
             <button
                     class="
               mdui-btn mdui-btn-icon mdui-ripple
@@ -201,24 +229,13 @@
             >
                 <i class="mdui-icon material-icons">mode_edit</i>
             </a>
-        </div>
-        <div class="mdui-list-item">
-            <label class="mdui-checkbox">
+        </label>
+        <label class="mdui-list-item">
+            <div class="mdui-checkbox">
                 <input type="checkbox"/>
                 <i class="mdui-checkbox-icon"></i>
-            </label>
+            </div>
             <div class="mdui-list-item-content">最新的文章</div>
-            <select class="mdui-select article-type-select" mdui-select>
-                <option value="1">综合新闻</option>
-                <option value="2" selected>党团声音</option>
-                <option value="3">新媒精选</option>
-            </select>
-            <a
-                    href="contents/news/article?aid=1"
-                    class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
-            >
-                <i class="mdui-icon material-icons">find_in_page</i>
-            </a>
             <button
                     class="
               mdui-btn mdui-btn-icon mdui-ripple
@@ -236,13 +253,40 @@
             >
                 <i class="mdui-icon material-icons">mode_edit</i>
             </a>
-        </div>
+        </label>
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
-<script src="js/panel-general.js"></script>
 <script>
+    var $ = mdui.$;
+    var mainDraw = new mdui.Drawer("#main-drawer");
+    $("#drawer-toggle-button").on("click", () => {
+        mainDraw.toggle();
+    });
+    $("#logout-button").on('click', () => {
+        mdui.confirm(
+            "你确认要退出账户吗",
+            "警告",
+            () => {
+                fetch("api/user-transaction?action=logout")
+                    .then((resp) => resp.text())
+                    .then(res => {
+                        // console.log("成功")
+                        location.reload()
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+            },
+            () => {
+            },
+            {
+                confirmText: "确认",
+                cancelText: "取消",
+            }
+        )
+    })
     $(".delete-button").on("click", () => {
         mdui.confirm(
             "你确认要删除这篇文章吗",

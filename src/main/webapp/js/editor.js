@@ -45,6 +45,23 @@ $(function () {
         document.getElementById('textarea-2').innerHTML = html
     }
 
+    const editorConfig2 = {MENU_CONF: {}};
+    editorConfig2.placeholder = '请输入摘要';
+    editorConfig2.onChange = (editor) => {
+        // 当编辑器选区、内容变化时，即触发
+        console.log('content', editor.children)
+        console.log('html', editor.getHtml())
+    };
+    editorConfig2.scroll = false // 禁止编辑器滚动
+    // 创建编辑器
+    const abstractEditor = wangEditor.createEditor({
+        selector: '#editor-abstract-area',
+        content: window.content1,
+        config: editorConfig2,
+        content: [], // 默认内容，下文有解释
+        mode: 'default' // 或者 'simple' ，下文有解释
+    });
+
     var instHelp = new mdui.Dialog('#editor-help-dialog');
     $("#editor-help-button").click(function () {
         instHelp.open()

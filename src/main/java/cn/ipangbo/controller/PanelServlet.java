@@ -21,6 +21,9 @@ public class PanelServlet extends HttpServlet {
         } else if ("teachers".equals(param)) {
             req.getRequestDispatcher("/WEB-INF/jsp/panel/teacherscontrol.jsp").forward(req, resp);
             return;
+        } else if ("search".equals(param)) {
+            req.getRequestDispatcher("/WEB-INF/jsp/panel/search.jsp").forward(req, resp);
+            return;
         } else {
             req.getRequestDispatcher("/WEB-INF/jsp/panel/panel.jsp").forward(req, resp);
             return;

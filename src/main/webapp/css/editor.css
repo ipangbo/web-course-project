@@ -25,11 +25,12 @@ body {
 
 .w-e-toolbar {
     justify-content: center;
+    border-bottom: 1px solid #eee;
 }
 
-#editor-container {
+.editor-container {
     width: 850px;
-    margin: 0 auto 500px auto;
+    margin: 0 auto 30px auto;
     background-color: #fff;
     padding: 20px 50px 50px 50px;
     border: 1px solid #e8e8e8;
@@ -60,6 +61,18 @@ body {
     margin-bottom: 10px;
     padding-left: 5px;
 }
+
+#content > h2 {
+    width: 850px;
+    margin: 20px auto;
+    color: #444;
+}
+
+#editor-abstract-container {
+    margin-bottom: 200px;
+}
+
+
 
 .fake-textarea {
     display: none;
