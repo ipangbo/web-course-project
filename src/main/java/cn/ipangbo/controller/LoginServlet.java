@@ -1,5 +1,6 @@
 package cn.ipangbo.controller;
 
+import cn.ipangbo.entity.MessageModel;
 import cn.ipangbo.entity.User;
 import cn.ipangbo.utils.LoginAuthUtils;
 

@@ -43,6 +43,12 @@
             justify-content: flex-end;
             margin-bottom: 20px;
         }
+
+        #msg-model-login {
+            color: #8f1919;
+            line-height: 36px;
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body class="bg mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-pink " id="mdui-title-bar">
@@ -85,6 +91,7 @@
 
         <!-- 卡片的按钮 -->
         <div class="mdui-card-actions" id="login-button-box">
+            <span id="msg-model-login">${msg.msg}</span>
             <a href="." class="mdui-btn mdui-ripple" id="back-button">返回前台网站</a>
             <input type="submit" class="mdui-btn mdui-ripple mdui-btn-raised mdui-color-theme-accent" value="登录">
         </div>

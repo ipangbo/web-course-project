@@ -1,4 +1,4 @@
-package cn.ipangbo.controller;
+package cn.ipangbo.entity;
 
 public class MessageModel {
     private String msg;
