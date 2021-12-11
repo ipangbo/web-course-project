@@ -62,7 +62,7 @@
     <!-- 卡片头部，包含头像、标题、副标题 -->
     <div class="mdui-card-header">
         <img class="mdui-card-header-avatar"
-             src="https://cdn.w3cbus.com/mdui/docs~1/static/1ca4b7b2b4b2f2352aeb.jpg" />
+             src="https://s3.bmp.ovh/imgs/2021/12/730a44dec11c01d5.jpg" />
         <div class="mdui-card-header-title">管理员登录</div>
         <div class="mdui-card-header-subtitle">磅礴新闻网管理系统</div>
     </div>
