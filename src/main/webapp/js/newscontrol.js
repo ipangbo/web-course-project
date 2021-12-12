@@ -60,6 +60,10 @@ fetch("api/query-all-news")
             $("#article-list").prepend(listItem)
         })
         mdui.mutation()
+        $(".article-type-select").on("change", () => {
+            // 改变类别的逻辑
+
+        })
     })
     .catch(err => {
         console.log(err)
