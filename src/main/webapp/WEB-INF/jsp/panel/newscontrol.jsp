@@ -131,16 +131,16 @@
             添加新闻
         </a>
     </div>
-    <div class="mdui-list">
+    <div class="mdui-list" id="article-list">
         <div class="mdui-list-item">
             <label class="mdui-checkbox">
                 <input type="checkbox"/>
                 <i class="mdui-checkbox-icon"></i>
             </label>
-            <div class="mdui-list-item-content">最新的文章</div>
+            <div class="mdui-list-item-content">为了测试，在初始的DOM中保留了这一项，将在生产环境移除</div>
             <select class="mdui-select article-type-select" mdui-select>
                 <option value="1">综合新闻</option>
-                <option value="2" selected>党团声音</option>
+                <option value="2">党团声音</option>
                 <option value="3">新媒精选</option>
             </select>
             <a
@@ -167,99 +167,13 @@
                 <i class="mdui-icon material-icons">mode_edit</i>
             </a>
         </div>
-        <div class="mdui-list-item">
-            <label class="mdui-checkbox">
-                <input type="checkbox"/>
-                <i class="mdui-checkbox-icon"></i>
-            </label>
-            <div class="mdui-list-item-content">最新的文章</div>
-            <select class="mdui-select article-type-select" mdui-select>
-                <option value="1">综合新闻</option>
-                <option value="2" selected>党团声音</option>
-                <option value="3">新媒精选</option>
-            </select>
-            <a
-                    href="contents/news/article?aid=1"
-                    class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
-            >
-                <i class="mdui-icon material-icons">find_in_page</i>
-            </a>
-            <button
-                    class="
-              mdui-btn mdui-btn-icon mdui-ripple
-              list-control-button
-              red-list-control-button
-              delete-button
-            "
-                    data-article-index="1"
-            >
-                <i class="mdui-icon material-icons">delete_forever</i>
-            </button>
-            <a
-                    href="panel/modnews?aid=1"
-                    class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
-            >
-                <i class="mdui-icon material-icons">mode_edit</i>
-            </a>
-        </div>
-        <div class="mdui-list-item">
-            <label class="mdui-checkbox">
-                <input type="checkbox"/>
-                <i class="mdui-checkbox-icon"></i>
-            </label>
-            <div class="mdui-list-item-content">最新的文章</div>
-            <select class="mdui-select article-type-select" mdui-select>
-                <option value="1">综合新闻</option>
-                <option value="2" selected>党团声音</option>
-                <option value="3">新媒精选</option>
-            </select>
-            <a
-                    href="contents/news/article?aid=1"
-                    class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
-            >
-                <i class="mdui-icon material-icons">find_in_page</i>
-            </a>
-            <button
-                    class="
-              mdui-btn mdui-btn-icon mdui-ripple
-              list-control-button
-              red-list-control-button
-              delete-button
-            "
-                    data-article-index="1"
-            >
-                <i class="mdui-icon material-icons">delete_forever</i>
-            </button>
-            <a
-                    href="panel/modnews?aid=1"
-                    class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
-            >
-                <i class="mdui-icon material-icons">mode_edit</i>
-            </a>
-        </div>
+
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
 <script src="js/panel-general.js"></script>
-<script>
-    $(".delete-button").on("click", () => {
-        mdui.confirm(
-            "你确认要删除这篇文章吗",
-            "警告",
-            function () {
-                mdui.alert("点击了确认按钮");
-                // fetch(删除的接口)
-            },
-            () => {
-            },
-            {
-                confirmText: "确认",
-                cancelText: "取消",
-            }
-        );
-    });
-</script>
+<script src="js/newscontrol.js"></script>
 </body>
 
 </html>
