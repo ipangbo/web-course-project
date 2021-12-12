@@ -1,5 +1,6 @@
 package cn.ipangbo.controller;
 
+import cn.ipangbo.utils.DataSourceUtils;
 import com.alibaba.fastjson.JSONObject;
 
 import javax.servlet.ServletException;
@@ -10,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 @WebServlet("/panel/addnews")
 public class AddNewsServlet extends HttpServlet {
@@ -37,6 +41,19 @@ public class AddNewsServlet extends HttpServlet {
         String articleAbstractJSON = jb.getString("article-abstract-json");
 
 //        存入数据库
+        String sql = "INSERT INTO NEWS(ATITLE, AAUTHOR, ACONTENTJSON, ACONTENTHTML, AABSTRACTJSON, AABSTRACTHTML) VALUES (?, ?, ?, ?, ?, ?)";
+        try (Connection conn = DataSourceUtils.getConnection();
+             PreparedStatement st = conn.prepareStatement(sql)) {
+            st.setString(1, articleTitle);
+            st.setString(2, articleAuthor);
+            st.setString(3, articleContentHTML);
+            st.setString(4, articleContentJSON);
+            st.setString(5, articleAbstractHTML);
+            st.setString(6, articleAbstractJSON);
+            st.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
 //        返回json
         PrintWriter out = resp.getWriter();
