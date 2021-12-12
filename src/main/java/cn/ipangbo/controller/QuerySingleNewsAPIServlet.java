@@ -16,8 +16,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@WebServlet("/api/query-all-news")
-public class QueryAllNewsAPIServlet  extends HttpServlet {
+@WebServlet("/api/query-single-news")
+public class QuerySingleNewsAPIServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         NewsArticle news = null;
