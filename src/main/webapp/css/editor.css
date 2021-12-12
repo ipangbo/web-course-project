@@ -101,3 +101,11 @@ body {
     font-weight: 200;
     letter-spacing: .7px;
 }
+
+#editor-content-container #w-e-textarea-1 {
+    min-height: 900px;
+}
+
+#editor-abstract-container #w-e-textarea-2 {
+    min-height: 300px;
+}
