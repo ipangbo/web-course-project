@@ -91,6 +91,7 @@
         class="
       mdui-appbar-with-toolbar
       mdui-theme-primary-blue-grey
+      mdui-theme-accent-pink
       mdui-drawer-body-left
     "
         id="mdui-title-bar"
