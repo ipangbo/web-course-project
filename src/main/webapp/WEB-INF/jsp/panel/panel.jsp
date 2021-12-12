@@ -103,7 +103,7 @@
         <a href="javascript:;" class="mdui-typo-headline">磅礴新闻网管理系统</a>
         <a href="javascript:;" class="mdui-typo-title">主页</a>
         <div class="mdui-toolbar-spacer"></div>
-        <a href="panel?page=search" class="mdui-btn mdui-btn-icon mdui-ripple" id="editor-save-button"><i
+        <a href="panel?page=search" class="mdui-btn mdui-btn-icon mdui-ripple" id="panel-search-button"><i
                 class="mdui-icon material-icons">search</i></a>
     </div>
 </div>
