@@ -199,7 +199,7 @@
                             <div class="link-title">在线课程</div>
                         </li>
                     </a>
-                    <a href="panel/" target="_blank">
+                    <a href="panel" target="_blank">
                         <li>
                             <i class="mdui-icon material-icons">account_circle</i>
                             <div class="link-title">投稿系统</div>

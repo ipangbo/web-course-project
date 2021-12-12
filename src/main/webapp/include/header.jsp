@@ -10,7 +10,7 @@
                 <a href="https://mail.nefu.edu.cn" target="_blank">
                     <li class="menu-button"><i class="mdui-icon material-icons">mail</i></li>
                 </a>
-                <a href="panel/" target="_blank">
+                <a href="panel" target="_blank">
                     <li class="menu-button"><i class="mdui-icon material-icons">account_circle</i></li>
                 </a>
             </ul>
