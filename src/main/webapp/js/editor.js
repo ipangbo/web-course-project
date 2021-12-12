@@ -5,14 +5,14 @@ const editorConfig = {MENU_CONF: {}};
 editorConfig.placeholder = '请输入内容';
 editorConfig.onChange = (editor) => {
     // 当编辑器选区、内容变化时，即触发
-    console.log('content', editor.children)
-    console.log('html', editor.getHtml())
+    // console.log('content', editor.children)
+    // console.log('html', editor.getHtml())
     const content = editor.children
     const contentStr = JSON.stringify(content)
     document.getElementById('textarea-1').innerHTML = contentStr
     const html = editor.getHtml()
     document.getElementById('textarea-2').innerHTML = html
-    console.log("文本框：" + document.getElementById('textarea-2').innerText)
+    // console.log("文本框：" + document.getElementById('textarea-2').innerText)
 };
 editorConfig.scroll = false // 禁止编辑器滚动
 
@@ -46,8 +46,10 @@ document.getElementById('editor-text-area').addEventListener('click', e => {
 const editorConfig2 = {MENU_CONF: {}};
 editorConfig2.placeholder = '请输入摘要。请注意，新闻网只能显示约150字，多余会被折叠。';
 editorConfig2.onChange = (editor) => {
-    console.log('content', editor.children)
-    console.log('html', editor.getHtml())
+    // console.log('content', editor.children)
+    // console.log('html', editor.getHtml())
+    const abstractHTML = editor.getHtml()
+    document.getElementById('textarea-3').innerHTML = abstractHTML
 };
 editorConfig2.scroll = false // 禁止编辑器滚动
 // 创建编辑器
@@ -71,13 +73,52 @@ $("#editor-save-button").on('click', function () {
     instSave.open()
 })
 $("#editor-save-dialog-ok").on('click', function () {
-    if (editor.isEmpty()) {
+    if (editor.isEmpty() || $("input[name=article-title]").val() === "" || $("input[name=article-author]").val() === "") {
         instSave.close()
-        mdui.alert("当前内容为空，必须写入内容才能提交")
+        mdui.alert("当前标题/发布单位/内容为空，必须写入内容才能提交")
     } else {
         $("#editor-save-dialog-ok").css("visibility", "hidden")
         $("#editor-save-dialog-cancel").hide()
         $("#save-spinner").show()
+
+        // 以下是发送给AddNewsServlet的逻辑
+        let articleTitle = $("input[name=article-title]").val()
+        let articleAuthor = $("input[name=article-author]").val()
+        let articleContentJSON = $("#textarea-1").val()
+        let articleContentHTML = $("#textarea-2").val()
+        let articleAbstractHTML = $("#textarea-3").val()
+        // console.log(articleAbstractHTML)
+        async function postData(url = '', data = {}) {
+            // Default options are marked with *
+            const response = await fetch(url, {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: JSON.stringify(data) // body data type must match "Content-Type" header
+            });
+            return response.json(); // parses JSON response into native JavaScript objects
+        }
+
+        postData('panel/addnews', {
+            "article-title": articleTitle,
+            "article-author": articleAuthor,
+            "article-content-html": articleContentHTML,
+            "article-content-json": articleContentJSON,
+            "article-abstract-html": articleAbstractHTML
+        })
+            .then(data => {
+                if (data.res === "ok") {
+                    location.replace("./panel?page=news")
+                } else {
+                    mdui.alert("出现错误，请联系开发者庞礴");
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            });
     }
 })
 $("#editor-save-dialog-cancel").on('click', function () {

@@ -55,7 +55,7 @@
         <div id="editor-content-container" class="editor-container">
             <div id="title-container">
                 <input type="text" name="article-title" placeholder="请输入标题"><br>
-                <input type="text" name="article-author" id="article-author" placeholder="作者">
+                <input type="text" name="article-author" id="article-author" placeholder="发布单位">
             </div>
             <div id="editor-text-area"></div>
         </div>
@@ -70,6 +70,10 @@
     <textarea id="textarea-1" class="fake-textarea"></textarea>
     <!-- 2是html -->
     <textarea id="textarea-2" class="fake-textarea"></textarea>
+    <!-- 3是摘要的html -->
+    <textarea id="textarea-3" class="fake-textarea"></textarea>
+
+
     <button class="mdui-fab mdui-fab-fixed mdui-color-blue-grey mdui-ripple" id="editor-help-button">?</button>
 
     <div class="mdui-dialog" id="editor-help-dialog">
@@ -108,6 +112,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@wangeditor/editor@latest/dist/index.min.js"></script>
 <script src="js/editor.js"></script>
 <script src="js/panel-general.js"></script>
+
 
 </body>
 
