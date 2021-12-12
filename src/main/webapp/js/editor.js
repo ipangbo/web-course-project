@@ -86,7 +86,8 @@ $("#editor-save-dialog-ok").on('click', function () {
         let articleAuthor = $("input[name=article-author]").val()
         let articleContentJSON = $("#textarea-1").val()
         let articleContentHTML = $("#textarea-2").val()
-        let articleAbstractHTML = $("#textarea-3").val()
+        let articleAbstractJSON = $("#textarea-3").val()
+        let articleAbstractHTML = $("#textarea-4").val()
         // console.log(articleAbstractHTML)
         async function postData(url = '', data = {}) {
             // Default options are marked with *
@@ -107,7 +108,8 @@ $("#editor-save-dialog-ok").on('click', function () {
             "article-author": articleAuthor,
             "article-content-html": articleContentHTML,
             "article-content-json": articleContentJSON,
-            "article-abstract-html": articleAbstractHTML
+            "article-abstract-html": articleAbstractHTML,
+            "article-abstract-json": articleAbstractJSON
         })
             .then(data => {
                 if (data.res === "ok") {

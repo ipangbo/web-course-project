@@ -70,9 +70,10 @@
     <textarea id="textarea-1" class="fake-textarea"></textarea>
     <!-- 2是html -->
     <textarea id="textarea-2" class="fake-textarea"></textarea>
-    <!-- 3是摘要的html -->
+    <!-- 3是摘要的json -->
     <textarea id="textarea-3" class="fake-textarea"></textarea>
-
+    <!-- 4是摘要的html -->
+    <textarea id="textarea-4" class="fake-textarea"></textarea>
 
     <button class="mdui-fab mdui-fab-fixed mdui-color-blue-grey mdui-ripple" id="editor-help-button">?</button>
 

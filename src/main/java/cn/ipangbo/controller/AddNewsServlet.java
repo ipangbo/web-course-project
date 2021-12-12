@@ -1,5 +1,7 @@
 package cn.ipangbo.controller;
 
+import com.alibaba.fastjson.JSONObject;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,12 +24,21 @@ public class AddNewsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         BufferedReader reader = req.getReader();
         String json = reader.readLine();
-        System.out.println(json);
+//        System.out.println(json);
         reader.close();
 
-        /**
-         * 返回json
-         */
+//        处理json
+        JSONObject jb = JSONObject.parseObject(json);
+        String articleTitle = jb.getString("article-title");
+        String articleAuthor = jb.getString("article-author");
+        String articleContentHTML = jb.getString("article-content-html");
+        String articleContentJSON = jb.getString("article-content-json");
+        String articleAbstractHTML = jb.getString("article-abstract-html");
+        String articleAbstractJSON = jb.getString("article-abstract-json");
+
+//        存入数据库
+
+//        返回json
         PrintWriter out = resp.getWriter();
         out.write("{\"res\":\"ok\"}");
         out.close();
