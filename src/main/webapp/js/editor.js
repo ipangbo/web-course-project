@@ -48,8 +48,11 @@ editorConfig2.placeholder = '请输入摘要。请注意，新闻网只能显示
 editorConfig2.onChange = (editor) => {
     // console.log('content', editor.children)
     // console.log('html', editor.getHtml())
+    const abstractContent = editor.children
+    const abstractJSON = JSON.stringify(abstractContent)
     const abstractHTML = editor.getHtml()
-    document.getElementById('textarea-3').innerHTML = abstractHTML
+    document.getElementById('textarea-3').innerHTML = abstractJSON
+    document.getElementById('textarea-4').innerHTML = abstractHTML
 };
 editorConfig2.scroll = false // 禁止编辑器滚动
 // 创建编辑器
@@ -123,6 +126,8 @@ $("#editor-save-dialog-ok").on('click', function () {
             });
     }
 })
+
+var saveDialog = new mdui.Dialog("#editor-save-dialog", {model: true})
 $("#editor-save-dialog-cancel").on('click', function () {
     instSave.close()
 })

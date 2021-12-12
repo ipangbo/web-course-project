@@ -35,10 +35,10 @@ public class AddNewsServlet extends HttpServlet {
         JSONObject jb = JSONObject.parseObject(json);
         String articleTitle = jb.getString("article-title");
         String articleAuthor = jb.getString("article-author");
-        String articleContentHTML = jb.getString("article-content-html");
         String articleContentJSON = jb.getString("article-content-json");
-        String articleAbstractHTML = jb.getString("article-abstract-html");
+        String articleContentHTML = jb.getString("article-content-html");
         String articleAbstractJSON = jb.getString("article-abstract-json");
+        String articleAbstractHTML = jb.getString("article-abstract-html");
 
 //        存入数据库
         String sql = "INSERT INTO NEWS(ATITLE, AAUTHOR, ACONTENTJSON, ACONTENTHTML, AABSTRACTJSON, AABSTRACTHTML) VALUES (?, ?, ?, ?, ?, ?)";
@@ -46,10 +46,10 @@ public class AddNewsServlet extends HttpServlet {
              PreparedStatement st = conn.prepareStatement(sql)) {
             st.setString(1, articleTitle);
             st.setString(2, articleAuthor);
-            st.setString(3, articleContentHTML);
-            st.setString(4, articleContentJSON);
-            st.setString(5, articleAbstractHTML);
-            st.setString(6, articleAbstractJSON);
+            st.setString(3, articleContentJSON);
+            st.setString(4, articleContentHTML);
+            st.setString(5, articleAbstractJSON);
+            st.setString(6, articleAbstractHTML);
             st.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
