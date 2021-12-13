@@ -98,12 +98,12 @@ fetch("api/query-all-news")
         })
         $('.delete-button').each( (index, element) => {
             $(element).on('click', () => {
-                // console.log("aid" + $(element).attr('data-select-aid'))
+                // console.log("aid" + $(element).parents('.mdui-list-item').attr('data-aid'))
                 // $(element).parents('.mdui-list-item').remove();
                 // console.log("删除")
 
                 postData('api/delete-news', {
-                    aid: $(element).attr('data-select-aid')
+                    aid: $(element).parents('.mdui-list-item').attr('data-aid')
                 })
                     .then(data => {
                         if (data.res === "ok") {
