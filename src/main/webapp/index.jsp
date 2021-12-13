@@ -7,6 +7,7 @@
 --%>
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html lang="zh-Hans-CN">
 
@@ -82,27 +83,12 @@
             <div class="horizon"></div>
             <div class="model-box-content" id="news-box-content">
                 <ul>
-                    <li>
-                        <a href="contents/news/article?aid=1" class="article-title">关于组织收看《2017 年度 CCCV
-                            “心血管OCT易损斑块识别”人工智能专题竞赛》的通知</a>
-                        <span class="article-time">2021-11-24</span>
-                    </li>
-                    <li>
-                        <a href="contents/news/article?aid=1" class="article-title">关于开除庞石薄等一名同学的通知</a>
-                        <span class="article-time">2021-11-24</span>
-                    </li>
-                    <li>
-                        <a href="contents/news/article?aid=1" class="article-title">诚信考试，回家过年——计科专业严抓考试纪律，扎实把好育人关</a>
-                        <span class="article-time">2021-11-24</span>
-                    </li>
-                    <li>
-                        <a href="contents/news/article?aid=1" class="article-title">计科专业党支部开展“以史为鉴”专题诚信教育活动</a>
-                        <span class="article-time">2021-11-24</span>
-                    </li>
-                    <li>
-                        <a href="contents/news/article?aid=1" class="article-title">我专业2019级计科四班团支部荣获全国“先进团支部”称号</a>
-                        <span class="article-time">2021-11-24</span>
-                    </li>
+                    <c:forEach items="${top5News}" var="news">
+                        <li>
+                            <a href="contents/news/article?aid=${news.aid}" class="article-title">${news.aTitle}</a>
+                            <span class="article-time"><fmt:formatDate pattern="yyyy-MM-dd" value="${news.aCreateTime}"/></span>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
 

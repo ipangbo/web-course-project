@@ -56,31 +56,13 @@
         <div class="article-content-box">
             <div class="article-title-box">
                 <h2>
-                    我校帽儿山教学区首次记录到国家重点保护动物黑熊和马鹿我校帽儿山教学区首次记录到国家重点保护动物黑熊和马鹿
+                    ${article.aTitle}
                 </h2>
-                <span>日期：2021-12-08</span>
-                <span>发布单位：帽儿山实验林场</span>
-                <span>文字：陈健</span>
+                <span>日期：<fmt:formatDate pattern="yyyy-MM-dd" value="${article.aCreateTime}"/></span>
+                <span>发布单位：${article.aAuthor}</span>
             </div>
             <div class="article-text-box">
-                <p>
-                    近日，帽儿山教学区在野生动物监测方面获得了重要发现。工作人员在定期收集尖砬沟施业区内红外相机影像资料时，相继发现黑熊（Ursus thibetanu）、马鹿（Cervus
-                    elaphus）、狍（Capreolus pygargus bedfordi）、野猪（Sus scrofa）、獾（Meles meles）、黄鼬（Mustela
-                    sibirica）等多种野生动物活动画面。此次发现是帽儿山教学区首次以影像形式记录到国家重点保护动物（II级）黑熊和马鹿。
-                </p>
-                <p>
-                    帽儿山教学区于2021年初成立野生动物监测小组，并购置了红外相机、外业笔记本电脑等设备。2021年4月份经我校动保学院专家现场指导，监测小组在尖砬沟施业区内布设红外相机6台，并定期进行野生动物影像数据收集。该小组依托基于多年的野外调查经验，对红外相机进行科学布点，为野生动物监测工作实现突破性进展。
-                </p>
-                <p>
-                    动保学院姜广顺教授说：“马鹿和黑熊是我国东北地区珍贵的大型林栖兽类，但由于历史上的大规模森林开发，栖息地破碎化严重，种群数量十分稀少。此次这两种国家重点保护动物的同时发现，反映出帽儿山教学区生态环境的保护成效十分显著”。
-                </p>
-                <p>
-                    近年来，随着帽儿山教学区对自然生态环境保护力度的不断加大，野生动物原始生境逐渐恢复，境内野生动物种类、数量正在不断增加，对于维护生态平衡，改善自然环境，促进社会经济持续稳定发展意义重大。
-                </p>
-                <img src="http://news.nefu.edu.cn/__local/4/DA/F4/C5C8F8C7C5C3942CACD853A71DC_D4D53972_1E96B6.jpg"
-                     alt="图片">
-                <video controls
-                       src="http://news.nefu.edu.cn/__local/2/0A/16/D394D8D9C48FEFEC719DFB5F9CF_1E9C5196_7BD5A2.mp4"></video>
+                ${article.aContentHTML}
             </div>
         </div>
     </div>
