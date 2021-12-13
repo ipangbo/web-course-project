@@ -54,9 +54,4 @@ public class QuerySingleNewsAPIServlet extends HttpServlet {
         out.close();
         resp.setStatus(200);
     }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doGet(req, resp);
-    }
 }

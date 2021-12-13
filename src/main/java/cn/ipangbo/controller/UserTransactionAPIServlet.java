@@ -18,9 +18,4 @@ public class UserTransactionAPIServlet extends HttpServlet {
             return;
         }
     }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
-    }
 }
