@@ -39,7 +39,7 @@
     <div class="core">
         <div class="pos">
             <i class="mdui-icon material-icons">local_offer</i>
-            您现在的位置：<a href="index.jsp">首页</a> >> <a href="contents/teachers/">教师团队</a>  >> 教师详情
+            您现在的位置：<a href="index.jsp">首页</a> >> <a href="contents/teachers">教师团队</a>  >> 教师详情
         </div>
 
     </div>
@@ -48,9 +48,9 @@
     <div class="core">
         <div class="sidebar">
             <ul>
-                <li><a href="contents/teachers/js.jsp">教授</a></li>
-                <li><a href="contents/teachers/fjs.jsp">副教授</a></li>
-                <li><a href="contents/teachers/jiangshi.jsp">讲师</a></li>
+                <li><a href="contents/teachers?page=js">教授</a></li>
+                <li><a href="contents/teachers?page=fjs">副教授</a></li>
+                <li><a href="contents/teachers?page=jiangshi">讲师</a></li>
             </ul>
         </div>
         <div class="article-content-box">

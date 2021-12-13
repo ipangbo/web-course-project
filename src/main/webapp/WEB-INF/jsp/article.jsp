@@ -39,7 +39,7 @@
     <div class="core">
         <div class="pos">
             <i class="mdui-icon material-icons">local_offer</i>
-            您现在的位置：<a href="index.jsp">首页</a> >> <a href="contents/news/">新闻网</a> >> 文章详情
+            您现在的位置：<a href="index.jsp">首页</a> >> <a href="contents/news">新闻网</a> >> 文章详情
         </div>
 
     </div>
@@ -48,9 +48,9 @@
     <div class="core">
         <div class="sidebar">
             <ul>
-                <li><a href="contents/news/zhxw.jsp">综合新闻</a></li>
-                <li><a href="contents/news/dtsy.jsp" class="red-sidebar-menu-item">党团声音</a></li>
-                <li><a href="contents/news/xmjx.jsp">新媒精选</a></li>
+                <li><a href="contents/news?page=zhxw">综合新闻</a></li>
+                <li><a href="contents/news?page=dtsy" class="red-sidebar-menu-item">党团声音</a></li>
+                <li><a href="contents/news?page=xmjx">新媒精选</a></li>
             </ul>
         </div>
         <div class="article-content-box">
