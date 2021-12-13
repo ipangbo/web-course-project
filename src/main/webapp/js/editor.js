@@ -1,4 +1,3 @@
-var $ = mdui.$;
 
 const wangEditor = window.wangEditor; // 全局变量
 const editorConfig = {MENU_CONF: {}};

@@ -15,13 +15,13 @@ fetch(`api/get-echo-data?aid=${aid}`)
         editorConfig.scroll = false // 禁止编辑器滚动
         editorConfig.onChange = (editor) => {
             // 当编辑器选区、内容变化时，即触发
-            // console.log('content', editor.children)
-            // console.log('html', editor.getHtml())
             const content = editor.children
             const contentStr = JSON.stringify(content)
-            document.getElementById('textarea-1').innerHTML = contentStr
             const html = editor.getHtml()
+            document.getElementById('textarea-1').innerHTML = contentStr
             document.getElementById('textarea-2').innerHTML = html
+            // console.log('content', editor.children)
+            // console.log('html', editor.getHtml())
             // console.log("文本框：" + document.getElementById('textarea-2').innerText)
         };
         // 摘要编辑器的config
@@ -81,6 +81,19 @@ fetch(`api/get-echo-data?aid=${aid}`)
                 instSave.close()
                 mdui.alert("当前标题/发布单位/内容为空，必须写入内容才能提交")
             } else {
+                // 再保障一次编辑器内容和隐藏文本框一直
+                // 否则仅更改标题不进入正文编辑区域也会引发bug
+                const content = editor.children
+                const contentStr = JSON.stringify(content)
+                const html = editor.getHtml()
+                document.getElementById('textarea-1').innerHTML = contentStr
+                document.getElementById('textarea-2').innerHTML = html
+                const abstractContent = editor.children
+                const abstractJSON = JSON.stringify(abstractContent)
+                const abstractHTML = editor.getHtml()
+                document.getElementById('textarea-3').innerHTML = abstractJSON
+                document.getElementById('textarea-4').innerHTML = abstractHTML
+
                 $("#editor-save-dialog-ok").css("visibility", "hidden")
                 $("#editor-save-dialog-cancel").hide()
                 $("#save-spinner").show()
