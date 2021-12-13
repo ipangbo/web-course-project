@@ -13,30 +13,32 @@ fetch(`api/get-echo-data?aid=${aid}`)
         const editorConfig = {MENU_CONF: {}};
         editorConfig.placeholder = '请输入内容';
         editorConfig.scroll = false // 禁止编辑器滚动
-        editorConfig.onChange = (editor) => {
-            // 当编辑器选区、内容变化时，即触发
-            const content = editor.children
-            const contentStr = JSON.stringify(content)
-            const html = editor.getHtml()
-            document.getElementById('textarea-1').innerHTML = contentStr
-            document.getElementById('textarea-2').innerHTML = html
-            // console.log('content', editor.children)
-            // console.log('html', editor.getHtml())
-            // console.log("文本框：" + document.getElementById('textarea-2').innerText)
-        };
+        // 已经废弃，在点击确定按钮时同步
+        // editorConfig.onChange = (editor) => {
+        //     // 当编辑器选区、内容变化时，即触发
+        //     const content = editor.children
+        //     const contentStr = JSON.stringify(content)
+        //     const html = editor.getHtml()
+        //     document.getElementById('textarea-1').innerHTML = contentStr
+        //     document.getElementById('textarea-2').innerHTML = html
+        //     // console.log('content', editor.children)
+        //     // console.log('html', editor.getHtml())
+        //     // console.log("文本框：" + document.getElementById('textarea-2').innerText)
+        // };
         // 摘要编辑器的config
         const editorConfig2 = {MENU_CONF: {}};
         editorConfig2.placeholder = '请输入摘要。请注意，新闻网只能显示约150字，多余会被折叠。';
         editorConfig2.scroll = false // 禁止编辑器滚动
-        editorConfig2.onChange = (editor) => {
-            // console.log('content', editor.children)
-            // console.log('html', editor.getHtml())
-            const abstractContent = editor.children
-            const abstractJSON = JSON.stringify(abstractContent)
-            const abstractHTML = editor.getHtml()
-            document.getElementById('textarea-3').innerHTML = abstractJSON
-            document.getElementById('textarea-4').innerHTML = abstractHTML
-        };
+        // 已经废弃，在点击确定按钮时同步
+        // editorConfig2.onChange = (editor) => {
+        //     // console.log('content', editor.children)
+        //     // console.log('html', editor.getHtml())
+        //     const abstractContent = editor.children
+        //     const abstractJSON = JSON.stringify(abstractContent)
+        //     const abstractHTML = editor.getHtml()
+        //     document.getElementById('textarea-3').innerHTML = abstractJSON
+        //     document.getElementById('textarea-4').innerHTML = abstractHTML
+        // };
 
         // 回显部分
         // console.log(res[0])
@@ -81,7 +83,7 @@ fetch(`api/get-echo-data?aid=${aid}`)
                 instSave.close()
                 mdui.alert("当前标题/发布单位/内容为空，必须写入内容才能提交")
             } else {
-                // 再保障一次编辑器内容和隐藏文本框一直
+                // 再保障一次编辑器内容和隐藏文本框一致
                 // 否则仅更改标题不进入正文编辑区域也会引发bug
                 const content = editor.children
                 const contentStr = JSON.stringify(content)
