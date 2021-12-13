@@ -131,44 +131,7 @@
             添加新闻
         </a>
     </div>
-    <div class="mdui-list" id="article-list">
-        <div class="mdui-list-item">
-            <label class="mdui-checkbox">
-                <input type="checkbox"/>
-                <i class="mdui-checkbox-icon"></i>
-            </label>
-            <div class="mdui-list-item-content">为了测试，在初始的DOM中保留了这一项，将在生产环境移除</div>
-            <select class="mdui-select article-type-select" mdui-select>
-                <option value="1">综合新闻</option>
-                <option value="2">党团声音</option>
-                <option value="3">新媒精选</option>
-            </select>
-            <a
-                    href="contents/news/article?aid=1"
-                    class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
-            >
-                <i class="mdui-icon material-icons">find_in_page</i>
-            </a>
-            <button
-                    class="
-              mdui-btn mdui-btn-icon mdui-ripple
-              list-control-button
-              red-list-control-button
-              delete-button
-            "
-                    data-article-index="1"
-            >
-                <i class="mdui-icon material-icons">delete_forever</i>
-            </button>
-            <a
-                    href="panel/modnews?aid=1"
-                    class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
-            >
-                <i class="mdui-icon material-icons">mode_edit</i>
-            </a>
-        </div>
-
-    </div>
+    <div class="mdui-list" id="article-list"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>

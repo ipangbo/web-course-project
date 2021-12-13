@@ -34,8 +34,8 @@ fetch("api/query-all-news")
     .then(res => {
         res.forEach((item) => {
             //let listItem = `<div class="mdui-list-item"><label class="mdui-checkbox"><input type="checkbox"/><i class="mdui-checkbox-icon"></i></label><div class="mdui-list-item-content">${item.title}</div><select class="mdui-select article-type-select"mdui-select><option value="1">综合新闻</option><option value="2">党团声音</option><option value="3">新媒精选</option></select><a href="contents/news/article?aid=${item.id}"class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"><i class="mdui-icon material-icons">find_in_page</i></a><button class="mdui-btn mdui-btn-icon mdui-ripple list-control-button red-list-control-button delete-button"data-article-index="${item.id}"><i class="mdui-icon material-icons">delete_forever</i></button><a href="panel/modnews?aid=${item.id}"class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"><i class="mdui-icon material-icons">mode_edit</i></a></div>`
-            let listItem = `<div class="mdui-list" id="article-list">
-        <div class="mdui-list-item">
+            let listItem = `
+        <div class="mdui-list-item" data-aid="${item.id}">
             <label class="mdui-checkbox">
                 <input type="checkbox"/>
                 <i class="mdui-checkbox-icon"></i>
@@ -69,8 +69,8 @@ fetch("api/query-all-news")
             >
                 <i class="mdui-icon material-icons">mode_edit</i>
             </a>
-        </div>` // html结束
-            $("#article-list").prepend(listItem)
+        </div>`;// html结束
+            $("#article-list").prepend(listItem);
         })
         mdui.mutation()
         $(".article-type-select").each( (index, element) => {
@@ -84,10 +84,31 @@ fetch("api/query-all-news")
                 })
                     .then(data => {
                         if (data.res === "ok") {
-                            console.log("类别已更改")
                             mdui.snackbar({
                                 message: '类别已更改'
                             });
+                        } else {
+                            mdui.alert("出现错误，请联系开发者庞礴");
+                        }
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    });
+            })
+        })
+        $('.delete-button').each( (index, element) => {
+            $(element).on('change', () => {
+                // console.log("aid" + $(element).attr('data-select-aid'))
+
+                postData('api/delete-news', {
+                    aid: $(element).attr('data-select-aid')
+                })
+                    .then(data => {
+                        if (data.res === "ok") {
+                            mdui.snackbar({
+                                message: '已删除'
+                            });
+
                         } else {
                             mdui.alert("出现错误，请联系开发者庞礴");
                         }
