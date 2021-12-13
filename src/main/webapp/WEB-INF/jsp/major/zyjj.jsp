@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
-<%@include file="../../include/header.jsp" %>
+<%@include file="../../../include/header.jsp" %>
 <div class="background-image">
     <div class="core indicator-box">
         <div class="indicator">
@@ -37,7 +37,7 @@
     <div class="core">
         <div class="pos">
             <i class="mdui-icon material-icons">local_offer</i>
-            您现在的位置：<a href="index.jsp">首页</a> >> <a href="contents/major/">专业介绍</a> >> 专业简介
+            您现在的位置：<a href="index.jsp">首页</a> >> <a href="contents/major">专业介绍</a> >> 专业简介
         </div>
 
     </div>
@@ -46,8 +46,8 @@
     <div class="core">
         <div class="sidebar">
             <ul>
-                <li><a href="contents/major/zyjj.jsp">专业简介</a></li>
-                <li><a href="contents/major/fxjj.jsp">方向简介</a></li>
+                <li><a href="contents/major?page=zyjj">专业简介</a></li>
+                <li><a href="contents/major?page=fxjj">方向简介</a></li>
             </ul>
         </div>
         <div class="article-box">
@@ -98,6 +98,6 @@
 </div>
 
 
-<%@include file="../../include/footer.jsp" %>
+<%@include file="../../../include/footer.jsp" %>
 </body>
 </html>

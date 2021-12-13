@@ -120,8 +120,8 @@
                 >
                 <span class="data-card-title">新闻总数</span>
             </div>
-            <div class="data-card-data-box">23</div>
-            <div class="data-card-info-box">上次发布时间：2021-12-8 12:30</div>
+            <div class="data-card-data-box">${newsCount}</div>
+            <div class="data-card-info-box">上次发布时间：<fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${lastDate}"/></div>
         </div>
         <div class="data-card">
             <div class="data-card-title-box">

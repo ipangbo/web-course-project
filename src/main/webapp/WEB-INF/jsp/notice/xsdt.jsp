@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <c:url var="base" value="/"></c:url>
     <base href="${base}">
-    <title>教育教学</title>
+    <title>学术动态</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
           integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
@@ -25,11 +25,11 @@
     <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
-<%@include file="../../include/header.jsp"%>
+<%@include file="../../../include/header.jsp"%>
 <div class="background-image">
     <div class="core indicator-box">
         <div class="indicator">
-            教育教学
+            学术动态
         </div>
     </div>
 </div>
@@ -37,7 +37,7 @@
     <div class="core">
         <div class="pos">
             <i class="mdui-icon material-icons">local_offer</i>
-            您现在的位置：<a href="index.jsp">首页</a> >> <a href="contents/notice/">通知公告</a> >> 教育教学
+            您现在的位置：<a href="index.jsp">首页</a> >> <a href="contents/notice/">通知公告</a> >> 学术动态
         </div>
 
     </div>
@@ -96,6 +96,6 @@
 
 
 
-<%@include file="../../include/footer.jsp"%>
+<%@include file="../../../include/footer.jsp"%>
 </body>
 </html>

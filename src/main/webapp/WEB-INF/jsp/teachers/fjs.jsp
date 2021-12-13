@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
-<%@include file="../../include/header.jsp" %>
+<%@include file="../../../include/header.jsp" %>
 <div class="background-image">
     <div class="core indicator-box">
         <div class="indicator">副教授</div>
@@ -43,9 +43,9 @@
     <div class="core">
         <div class="sidebar">
             <ul>
-                <li><a href="contents/teachers/js.jsp">教授</a></li>
-                <li><a href="contents/teachers/fjs.jsp">副教授</a></li>
-                <li><a href="contents/teachers/jiangshi.jsp">讲师</a></li>
+                <li><a href="contents/teachers?page=js">教授</a></li>
+                <li><a href="contents/teachers?page=fjs">副教授</a></li>
+                <li><a href="contents/teachers?page=jiangshi">讲师</a></li>
             </ul>
         </div>
         <div class="article-box">
@@ -145,6 +145,6 @@
     </div>
 </div>
 
-<%@include file="../../include/footer.jsp" %>
+<%@include file="../../../include/footer.jsp" %>
 </body>
 </html>

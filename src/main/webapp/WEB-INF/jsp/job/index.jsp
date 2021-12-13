@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
-<%@include file="../../include/header.jsp" %>
+<%@include file="../../../include/header.jsp" %>
 <div class="background-image">
     <div class="core indicator-box">
         <div class="indicator">
@@ -46,9 +46,9 @@
     <div class="core">
         <div class="sidebar">
             <ul>
-                <li><a href="contents/job/zpzx.jsp">招聘中心</a></li>
-                <li><a href="contents/job/cxcy.jsp">创新创业</a></li>
-                <li><a href="contents/job/gjhz.jsp">国际合作</a></li>
+                <li><a href="contents/job?page=zpzx">招聘中心</a></li>
+                <li><a href="contents/job?page=cxcy">创新创业</a></li>
+                <li><a href="contents/job?page=gjhz">国际合作</a></li>
             </ul>
         </div>
         <div class="article-box">
@@ -63,6 +63,6 @@
 </div>
 
 
-<%@include file="../../include/footer.jsp" %>
+<%@include file="../../../include/footer.jsp" %>
 </body>
 </html>
