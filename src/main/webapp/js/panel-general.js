@@ -1,5 +1,5 @@
-var $ = mdui.$;
-var mainDraw = new mdui.Drawer("#main-drawer");
+let $ = mdui.$;
+let mainDraw = new mdui.Drawer("#main-drawer");
 $("#drawer-toggle-button").on("click", () => {
     mainDraw.toggle();
 });

@@ -54,10 +54,10 @@
     <div id="content">
         <div id="editor-content-container" class="editor-container">
             <div id="title-container">
-                <input type="text" name="article-title" placeholder="请输入标题"><br>
-                <input type="text" name="article-author" id="article-author" placeholder="发布单位">
+                <input type="text" name="article-title" placeholder="请输入标题" value="${newsToEcho.aTitle}"><br>
+                <input type="text" name="article-author" id="article-author" placeholder="发布单位" value="${newsToEcho.aAuthor}">
             </div>
-            <div id="editor-text-area"></div>
+            <div id="editor-text-area" data-aid="${newsToEcho.aid}"></div>
         </div>
         <h2>摘要</h2>
         <div id="editor-abstract-container" class="editor-container">
@@ -112,7 +112,7 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@wangeditor/editor@latest/dist/index.min.js"></script>
 <script src="js/panel-general.js"></script>
-<script src="js/editor.js"></script>
+<script src="js/editorecho.js"></script>
 
 
 </body>
