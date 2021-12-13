@@ -97,8 +97,10 @@ fetch("api/query-all-news")
             })
         })
         $('.delete-button').each( (index, element) => {
-            $(element).on('change', () => {
+            $(element).on('click', () => {
                 // console.log("aid" + $(element).attr('data-select-aid'))
+                // $(element).parents('.mdui-list-item').remove();
+                // console.log("删除")
 
                 postData('api/delete-news', {
                     aid: $(element).attr('data-select-aid')
@@ -108,7 +110,8 @@ fetch("api/query-all-news")
                             mdui.snackbar({
                                 message: '已删除'
                             });
-
+                            $(element).parents('.mdui-list-item').remove();
+                            // Todo: 加入撤回
                         } else {
                             mdui.alert("出现错误，请联系开发者庞礴");
                         }
