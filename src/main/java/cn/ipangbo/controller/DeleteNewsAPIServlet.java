@@ -1,5 +1,6 @@
 package cn.ipangbo.controller;
 
+import cn.ipangbo.service.DeleteNewsAPIService;
 import cn.ipangbo.utils.DataSourceUtils;
 import com.alibaba.fastjson.JSONObject;
 
@@ -24,20 +25,13 @@ public class DeleteNewsAPIServlet extends HttpServlet {
 //        System.out.println(json);
         reader.close();
 
-//        处理json
-        JSONObject jb = JSONObject.parseObject(json);
-        int aid = jb.getIntValue("aid");
-
-//        存入数据库
-        String sql = "DELETE FROM NEWS WHERE AID = ?";
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql)) {
-            st.setInt(1, aid);
-            st.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        DeleteNewsAPIService service = new DeleteNewsAPIService();
+        if (service.deleteNews(json) == 1) {
+            PrintWriter out = resp.getWriter();
+            out.write("{\"res\":\"failed\"}");
+            out.close();
+            return;
         }
-        System.out.println("删除了" + aid);
 //        返回json
         PrintWriter out = resp.getWriter();
         out.write("{\"res\":\"ok\"}");

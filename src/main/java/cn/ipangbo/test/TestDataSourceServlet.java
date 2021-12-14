@@ -1,4 +1,4 @@
-package cn.ipangbo.controller;
+package cn.ipangbo.test;
 
 import cn.ipangbo.utils.DataSourceUtils;
 
