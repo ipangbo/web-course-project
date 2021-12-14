@@ -1,8 +1,8 @@
 package cn.ipangbo.controller;
 
 import cn.ipangbo.entity.NewsArticle;
+import cn.ipangbo.service.NewsService;
 import cn.ipangbo.utils.DataSourceUtils;
-import com.alibaba.fastjson.JSON;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,83 +22,19 @@ public class NewsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String param = req.getParameter("page");
-        NewsArticle news = null;
-        List<NewsArticle> allNews = new ArrayList<>();
+        NewsService service = new NewsService();
+
         if ("zhxw".equals(param)) {
-            String sql = "SELECT AID, ATITLE, AABSTRACTHTML, ACATEGORY, ACREATETIME FROM NEWS WHERE ACATEGORY=1 ORDER BY AID DESC";
-            try (Connection conn = DataSourceUtils.getConnection();
-                 PreparedStatement st = conn.prepareStatement(sql);
-                 ResultSet rs = st.executeQuery()) {
-                while (rs.next()) {
-                    news = new NewsArticle();
-                    news.setAid(rs.getInt(1));
-                    news.setaTitle(rs.getString(2));
-                    news.setaAbstractHTML(rs.getString(3));
-                    news.setaCategory(rs.getInt(4));
-                    news.setaCreateTime(rs.getDate(5));
-                    allNews.add(news);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            req.setAttribute("allNews", allNews);
+            req.setAttribute("allNews", service.getAllZHXWArticles());
             req.getRequestDispatcher("/WEB-INF/jsp/news/zhxw.jsp").forward(req, resp);
         } else if ("dtsy".equals(param)) {
-            String sql = "SELECT AID, ATITLE, AABSTRACTHTML, ACATEGORY, ACREATETIME FROM NEWS WHERE ACATEGORY=2 ORDER BY AID DESC";
-            try (Connection conn = DataSourceUtils.getConnection();
-                 PreparedStatement st = conn.prepareStatement(sql);
-                 ResultSet rs = st.executeQuery()) {
-                while (rs.next()) {
-                    news = new NewsArticle();
-                    news.setAid(rs.getInt(1));
-                    news.setaTitle(rs.getString(2));
-                    news.setaAbstractHTML(rs.getString(3));
-                    news.setaCategory(rs.getInt(4));
-                    news.setaCreateTime(rs.getDate(5));
-                    allNews.add(news);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            req.setAttribute("allNews", allNews);
+            req.setAttribute("allNews", service.getAllDTSYArticles());
             req.getRequestDispatcher("/WEB-INF/jsp/news/dtsy.jsp").forward(req, resp);
         } else if ("xmjx".equals(param)) {
-            String sql = "SELECT AID, ATITLE, AABSTRACTHTML, ACATEGORY, ACREATETIME FROM NEWS WHERE ACATEGORY=3 ORDER BY AID DESC";
-            try (Connection conn = DataSourceUtils.getConnection();
-                 PreparedStatement st = conn.prepareStatement(sql);
-                 ResultSet rs = st.executeQuery()) {
-                while (rs.next()) {
-                    news = new NewsArticle();
-                    news.setAid(rs.getInt(1));
-                    news.setaTitle(rs.getString(2));
-                    news.setaAbstractHTML(rs.getString(3));
-                    news.setaCategory(rs.getInt(4));
-                    news.setaCreateTime(rs.getDate(5));
-                    allNews.add(news);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            req.setAttribute("allNews", allNews);
+            req.setAttribute("allNews", service.getAllXMJXArticles());
             req.getRequestDispatcher("/WEB-INF/jsp/news/xmjx.jsp").forward(req, resp);
         } else {
-            String sql = "SELECT AID, ATITLE, AABSTRACTHTML, ACATEGORY, ACREATETIME FROM NEWS ORDER BY AID DESC";
-            try (Connection conn = DataSourceUtils.getConnection();
-                 PreparedStatement st = conn.prepareStatement(sql);
-                 ResultSet rs = st.executeQuery()) {
-                while (rs.next()) {
-                    news = new NewsArticle();
-                    news.setAid(rs.getInt(1));
-                    news.setaTitle(rs.getString(2));
-                    news.setaAbstractHTML(rs.getString(3));
-                    news.setaCategory(rs.getInt(4));
-                    news.setaCreateTime(rs.getDate(5));
-                    allNews.add(news);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            req.setAttribute("allNews", allNews);
+            req.setAttribute("allNews", service.getAllArticles());
             req.getRequestDispatcher("/WEB-INF/jsp/news/index.jsp").forward(req, resp);
         }
     }

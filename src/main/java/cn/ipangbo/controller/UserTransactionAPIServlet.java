@@ -15,7 +15,6 @@ public class UserTransactionAPIServlet extends HttpServlet {
         if ("logout".equals(param)) {
             req.getSession().removeAttribute("user");
             resp.setStatus(200);
-            return;
         }
     }
 }
