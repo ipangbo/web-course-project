@@ -1,5 +1,6 @@
 package cn.ipangbo.controller;
 
+import cn.ipangbo.service.ModifyNewsCategoryAPIService;
 import cn.ipangbo.utils.DataSourceUtils;
 import com.alibaba.fastjson.JSONObject;
 
@@ -24,20 +25,12 @@ public class ModifyNewsCategoryAPIServlet extends HttpServlet {
 //        System.out.println(json);
         reader.close();
 
-//        处理json
-        JSONObject jb = JSONObject.parseObject(json);
-        int aid = jb.getIntValue("aid");
-        int newcategory = jb.getIntValue("newcategory");
-
-//        存入数据库
-        String sql = "UPDATE NEWS SET ACATEGORY = ? WHERE AID = ?";
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql)) {
-            st.setInt(1, newcategory);
-            st.setInt(2, aid);
-            st.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        ModifyNewsCategoryAPIService service = new ModifyNewsCategoryAPIService();
+        if (service.modifyNewsCategory(json) == 1) {
+            PrintWriter out = resp.getWriter();
+            out.write("{\"res\":\"failed\"}");
+            out.close();
+            return;
         }
 
 //        返回json

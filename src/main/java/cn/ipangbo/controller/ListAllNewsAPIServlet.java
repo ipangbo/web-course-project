@@ -1,6 +1,7 @@
 package cn.ipangbo.controller;
 
 import cn.ipangbo.entity.NewsArticle;
+import cn.ipangbo.service.ListAllNewsService;
 import cn.ipangbo.utils.DataSourceUtils;
 import com.alibaba.fastjson.JSON;
 
@@ -22,24 +23,9 @@ import java.util.List;
 public class ListAllNewsAPIServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        NewsArticle news = null;
-        List<NewsArticle> articleList = new ArrayList<>();
-        String jsonOutput = "";
-        String sql = "SELECT AID, ATITLE, ACATEGORY FROM NEWS";
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql);
-             ResultSet rs = st.executeQuery()) {
-            while (rs.next()) {
-                news = new NewsArticle();
-                news.setAid(rs.getInt(1));
-                news.setaTitle(rs.getString(2));
-                news.setaCategory(rs.getInt(3));
-                articleList.add(news);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        jsonOutput = JSON.toJSONString(articleList);
+        ListAllNewsService service = new ListAllNewsService();
+        String jsonOutput = service.listAllNews();
+
         resp.setContentType("application/json;charset=utf-8");
         PrintWriter out = resp.getWriter();
         out.write(jsonOutput);
