@@ -90,9 +90,9 @@ fetch(`api/get-echo-data?aid=${aid}`)
                 const html = editor.getHtml()
                 document.getElementById('textarea-1').innerHTML = contentStr
                 document.getElementById('textarea-2').innerHTML = html
-                const abstractContent = editor.children
+                const abstractContent = abstractEditor.children
                 const abstractJSON = JSON.stringify(abstractContent)
-                const abstractHTML = editor.getHtml()
+                const abstractHTML = abstractEditor.getHtml()
                 document.getElementById('textarea-3').innerHTML = abstractJSON
                 document.getElementById('textarea-4').innerHTML = abstractHTML
 
