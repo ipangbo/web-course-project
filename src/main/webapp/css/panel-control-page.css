@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#drawer-inner-card {
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-box {
+    padding: 35px 25px;
+}
+
+
+.data-card-title-box > i {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.mdui-list .list-control-button {
+    margin-left: 10px;
+    color: #666;
+}
+
+.mdui-list .red-list-control-button:hover {
+    color: rgb(197, 6, 6);
+}

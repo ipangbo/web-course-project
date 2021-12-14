@@ -10,7 +10,7 @@
     <div class="mdui-card" id="drawer-inner-card">
         <div class="mdui-card-media">
             <img
-                    src="https://s3.bmp.ovh/imgs/2021/12/730a44dec11c01d5.jpg"
+                    src="https://tc.qn.ipangbo.cn/image/mdui.jpg"
             />
             <div class="mdui-card-media-covered">
                 <div class="mdui-card-primary">

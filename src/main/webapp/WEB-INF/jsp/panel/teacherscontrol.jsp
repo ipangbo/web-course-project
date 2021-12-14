@@ -7,7 +7,6 @@
 --%>
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="zh-Hans-CN">
 <head>
@@ -20,81 +19,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
           integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous"/>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="css/panel-control-page.css">
 
-        #drawer-inner-card {
-            box-shadow: none;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .content-box {
-            padding: 35px 25px;
-        }
-
-        .data-card-box {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .data-card {
-            margin-top: 20px;
-            width: 300px;
-            height: 200px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-        }
-
-        .data-card-title-box {
-            display: flex;
-            align-items: center;
-        }
-
-        .data-card-title-box > i {
-            display: inline-block;
-            width: 45px;
-            height: 45px;
-            font-size: 45px;
-            line-height: 45px;
-        }
-
-        .data-card-title {
-            display: inline-block;
-            font-size: 25px;
-            margin-left: 10px;
-        }
-
-        .data-card-data-box {
-            font-size: 60px;
-            font-weight: 700;
-            color: #444;
-            text-align: right;
-            margin-top: 25px;
-            margin-right: 15px;
-        }
-
-        .data-card-info-box {
-            text-align: right;
-            color: #888;
-            margin-right: 5px;
-            margin-top: 10px;
-        }
-
-        .mdui-list .list-control-button {
-            margin-left: 10px;
-            color: #666;
-        }
-
-        .mdui-list .red-list-control-button:hover {
-            color: rgb(197, 6, 6);
-        }
-    </style>
 </head>
 <body
         class="
@@ -107,70 +33,19 @@
 >
 <div class="mdui-appbar mdui-appbar-fixed">
     <div class="mdui-toolbar mdui-color-theme">
-        <a
-                href="javascript:;"
-                class="mdui-btn mdui-btn-icon"
-                id="drawer-toggle-button"
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon" id="drawer-toggle-button"
         ><i class="mdui-icon material-icons">menu</i></a
         >
-        <a href="javascript:;" class="mdui-typo-headline">磅礴新闻网管理系统</a>
+        <a href="panel" class="mdui-typo-headline">磅礴新闻网管理系统</a>
         <a href="javascript:;" class="mdui-typo-title">教师管理</a>
         <div class="mdui-toolbar-spacer"></div>
+        <a href="panel?page=search" class="mdui-btn mdui-btn-icon mdui-ripple" id="panel-search-button"><i
+                class="mdui-icon material-icons">search</i></a>
     </div>
 </div>
 
-<div class="mdui-drawer" id="main-drawer">
-    <div class="mdui-card" id="drawer-inner-card">
-        <div class="mdui-card-media">
-            <img
-                    src="https://cdn.w3cbus.com/mdui/docs~1/static/1ca4b7b2b4b2f2352aeb.jpg"
-            />
-            <div class="mdui-card-media-covered">
-                <div class="mdui-card-primary">
-                    <div class="mdui-card-primary-title">管理员</div>
-                    <div class="mdui-card-primary-subtitle">admin</div>
-                </div>
-            </div>
-        </div>
-        <div class="mdui-card-actions">
-            <button
-                    class="mdui-btn mdui-ripple draw-card-right-button"
-                    id="setting-button"
-            >
-                修改账户
-            </button>
-            <button class="mdui-btn mdui-ripple" id="logout-button">登出</button>
-        </div>
-    </div>
-    <ul class="mdui-list">
-        <a href="panel?page=home">
-            <li class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-content">主页</div>
-                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
-            </li>
-        </a>
-        <a href="panel?page=news">
-            <li class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-content">新闻管理</div>
-                <i class="mdui-list-item-icon mdui-icon material-icons">fiber_new</i>
-            </li>
-        </a>
-        <a href="panel?page=notice">
-            <li class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-content">公告管理</div>
-                <i class="mdui-list-item-icon mdui-icon material-icons"
-                >notifications</i
-                >
-            </li>
-        </a>
-        <a href="panel?page=teachers">
-            <li class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-content">教师管理</div>
-                <i class="mdui-list-item-icon mdui-icon material-icons">person_add</i>
-            </li>
-        </a>
-    </ul>
-</div>
+<%@ include file="/include/panel-drawer.jsp" %>
+
 
 <div class="content-box">
     <div class="tools-bar">
@@ -178,7 +53,7 @@
                 href="panel/addnews"
                 class="mdui-btn mdui-ripple mdui-color-theme-accent"
         >
-            添加新闻
+            添加教师
         </a>
     </div>
     <div class="mdui-list">
@@ -187,7 +62,7 @@
                 <input type="checkbox"/>
                 <i class="mdui-checkbox-icon"></i>
             </div>
-            <div class="mdui-list-item-content">最新的文章</div>
+            <div class="mdui-list-item-content">请注意</div>
             <button
                     class="
               mdui-btn mdui-btn-icon mdui-ripple
@@ -211,7 +86,7 @@
                 <input type="checkbox"/>
                 <i class="mdui-checkbox-icon"></i>
             </div>
-            <div class="mdui-list-item-content">最新的文章</div>
+            <div class="mdui-list-item-content">只有新闻管理界面有实质功能</div>
             <button
                     class="
               mdui-btn mdui-btn-icon mdui-ripple
@@ -235,7 +110,7 @@
                 <input type="checkbox"/>
                 <i class="mdui-checkbox-icon"></i>
             </div>
-            <div class="mdui-list-item-content">最新的文章</div>
+            <div class="mdui-list-item-content">本页面仅作演示</div>
             <button
                     class="
               mdui-btn mdui-btn-icon mdui-ripple

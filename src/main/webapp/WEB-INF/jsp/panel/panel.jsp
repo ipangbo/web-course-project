@@ -20,22 +20,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
           integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/panel-control-page.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        #drawer-inner-card {
-            box-shadow: none;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .content-box {
-            padding: 35px 25px;
-        }
-
         .data-card-box {
             display: flex;
             flex-wrap: wrap;
@@ -101,7 +87,7 @@
         <a href="javascript:;" class="mdui-btn mdui-btn-icon" id="drawer-toggle-button"
         ><i class="mdui-icon material-icons">menu</i></a
         >
-        <a href="javascript:;" class="mdui-typo-headline">磅礴新闻网管理系统</a>
+        <a href="panel" class="mdui-typo-headline">磅礴新闻网管理系统</a>
         <a href="javascript:;" class="mdui-typo-title">主页</a>
         <div class="mdui-toolbar-spacer"></div>
         <a href="panel?page=search" class="mdui-btn mdui-btn-icon mdui-ripple" id="panel-search-button"><i

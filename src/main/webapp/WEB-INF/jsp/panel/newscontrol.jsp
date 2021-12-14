@@ -7,7 +7,6 @@
 --%>
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="zh-Hans-CN">
 <head>
@@ -20,82 +19,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
           integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous"/>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        #drawer-inner-card {
-            box-shadow: none;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .content-box {
-            padding: 35px 25px;
-        }
-
-        .data-card-box {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .data-card {
-            margin-top: 20px;
-            width: 300px;
-            height: 200px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-        }
-
-        .data-card-title-box {
-            display: flex;
-            align-items: center;
-        }
-
-        .data-card-title-box > i {
-            display: inline-block;
-            width: 45px;
-            height: 45px;
-            font-size: 45px;
-            line-height: 45px;
-        }
-
-        .data-card-title {
-            display: inline-block;
-            font-size: 25px;
-            margin-left: 10px;
-        }
-
-        .data-card-data-box {
-            font-size: 60px;
-            font-weight: 700;
-            color: #444;
-            text-align: right;
-            margin-top: 25px;
-            margin-right: 15px;
-        }
-
-        .data-card-info-box {
-            text-align: right;
-            color: #888;
-            margin-right: 5px;
-            margin-top: 10px;
-        }
-
-        .mdui-list .list-control-button {
-            margin-left: 10px;
-            color: #666;
-        }
-
-        .mdui-list .red-list-control-button:hover {
-            color: rgb(197, 6, 6);
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/panel-control-page.css">
 </head>
 <body
         class="
@@ -108,15 +32,14 @@
 >
 <div class="mdui-appbar mdui-appbar-fixed">
     <div class="mdui-toolbar mdui-color-theme">
-        <a
-                href="javascript:;"
-                class="mdui-btn mdui-btn-icon"
-                id="drawer-toggle-button"
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon" id="drawer-toggle-button"
         ><i class="mdui-icon material-icons">menu</i></a
         >
-        <a href="javascript:;" class="mdui-typo-headline">磅礴新闻网管理系统</a>
+        <a href="panel" class="mdui-typo-headline">磅礴新闻网管理系统</a>
         <a href="javascript:;" class="mdui-typo-title">新闻管理</a>
         <div class="mdui-toolbar-spacer"></div>
+        <a href="panel?page=search" class="mdui-btn mdui-btn-icon mdui-ripple" id="panel-search-button"><i
+                class="mdui-icon material-icons">search</i></a>
     </div>
 </div>
 
