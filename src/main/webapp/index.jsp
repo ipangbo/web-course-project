@@ -103,7 +103,7 @@
                 <img src="https://tc.qn.ipangbo.cn/image/intro.png" alt="专业介绍图片" id="intro-pic">
                 <p>计算机科学与技术系始建于1988年的微机应用专业。1995年在原专业基础上建立了“计算机科学与技术系”。“十一五”期间计算机专业被批准为黑龙江省重点专业建设点和东北林业大学优势专业。2019年通过工程教育专业认证，同年评为黑龙江省一流专业建设点，
                     2020年评为国家级一流本科专业建设点</p>
-                <a href="contents/major/">>>查看更多</a>
+                <a href="contents/major">>>查看更多</a>
             </div>
         </div>
     </div>
@@ -114,7 +114,7 @@
             <div class="model-box-header">
                 <i class="mdui-icon material-icons">notifications</i>
                 <span class="model-label">通知公告</span>
-                <a href="contents/notice/" id="notice-more-button">>>查看更多</a>
+                <a href="contents/notice" id="notice-more-button">>>查看更多</a>
             </div>
             <div class="horizon"></div>
             <div class="model-box-content" id="notice-box-content">
