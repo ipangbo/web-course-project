@@ -1,6 +1,7 @@
 package cn.ipangbo.controller;
 
 import cn.ipangbo.entity.NewsArticle;
+import cn.ipangbo.service.QuerySingleNewsAPIService;
 import cn.ipangbo.utils.DataSourceUtils;
 import com.alibaba.fastjson.JSON;
 
@@ -20,33 +21,10 @@ import java.sql.SQLException;
 public class QuerySingleNewsAPIServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        NewsArticle news = null;
         int aid = Integer.parseInt(req.getParameter("aid"));
-        String jsonOutput = "";
-        String sql = "SELECT AID, ATITLE, AAUTHOR, ACONTENTJSON, ACONTENTHTML, AABSTRACTJSON, AABSTRACTHTML, ACATEGORY, ACREATETIME, AMODIFYTIME FROM NEWS WHERE AID IN (?)";
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql)) {
-            st.setInt(1, aid);
-            try (ResultSet rs = st.executeQuery()) {
-                while (rs.next()) {
-                    news = new NewsArticle();
-                    news.setAid(rs.getInt(1));
-                    news.setaTitle(rs.getString(2));
-                    news.setaAuthor(rs.getString(3));
-                    news.setaContentJSON(rs.getString(4));
-                    news.setaContentHTML(rs.getString(5));
-                    news.setaAbstractJSON(rs.getString(6));
-                    news.setaAbstractHTML(rs.getString(7));
-                    news.setaCategory(rs.getInt(8));
-                    news.setaCreateTime(rs.getDate(9));
-                    news.setaModifyTime(rs.getDate(10));
 
-                    jsonOutput = JSON.toJSONString(news);
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        QuerySingleNewsAPIService service = new QuerySingleNewsAPIService();
+        String jsonOutput = service.querySingleNews(aid);
 
         resp.setContentType("application/json;charset=utf-8");
         PrintWriter out = resp.getWriter();
