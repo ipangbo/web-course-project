@@ -1,8 +1,6 @@
 package cn.ipangbo.controller;
 
 import cn.ipangbo.service.DeleteNewsAPIService;
-import cn.ipangbo.utils.DataSourceUtils;
-import com.alibaba.fastjson.JSONObject;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 @WebServlet("/api/delete-news")
 public class DeleteNewsAPIServlet extends HttpServlet {
