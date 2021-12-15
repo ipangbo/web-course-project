@@ -65,6 +65,37 @@ $("#search-button").on('click', () => {
             </a>
         </div>`;// html结束
                 $("#article-list").prepend(listItem);
+            });
+
+            // 为删除按钮绑定删除事件
+            $('.delete-button').each( (index, element) => {
+                $(element).on('click', () => {
+                    // console.log("aid" + $(element).parents('.mdui-list-item').attr('data-aid'))
+                    // $(element).parents('.mdui-list-item').remove();
+                    // console.log("删除")
+                    mdui.confirm("确定要删除吗？", () => {
+                        postData('api/delete-news', {
+                            aid: $(element).parents('.mdui-list-item').attr('data-aid')
+                        })
+                            .then(data => {
+                                if (data.res === "ok") {
+                                    mdui.snackbar({
+                                        message: '已删除'
+                                    });
+                                    $(element).parents('.mdui-list-item').remove();
+                                    // Todo: 加入撤回
+                                } else {
+                                    mdui.alert("出现错误，请联系开发者庞礴");
+                                }
+                            })
+                            .catch(err => {
+                                console.log(err);
+                            });
+                    }, () => {}, {
+                        confirmText: "删除",
+                        cancelText: "取消"
+                    })
+                })
             })
         })
         .catch(err => {

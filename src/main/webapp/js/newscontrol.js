@@ -101,24 +101,28 @@ fetch("api/query-all-news")
                 // console.log("aid" + $(element).parents('.mdui-list-item').attr('data-aid'))
                 // $(element).parents('.mdui-list-item').remove();
                 // console.log("删除")
-
-                postData('api/delete-news', {
-                    aid: $(element).parents('.mdui-list-item').attr('data-aid')
-                })
-                    .then(data => {
-                        if (data.res === "ok") {
-                            mdui.snackbar({
-                                message: '已删除'
-                            });
-                            $(element).parents('.mdui-list-item').remove();
-                            // Todo: 加入撤回
-                        } else {
-                            mdui.alert("出现错误，请联系开发者庞礴");
-                        }
+                mdui.confirm("确定要删除吗？", () => {
+                    postData('api/delete-news', {
+                        aid: $(element).parents('.mdui-list-item').attr('data-aid')
                     })
-                    .catch(err => {
-                        console.log(err);
-                    });
+                        .then(data => {
+                            if (data.res === "ok") {
+                                mdui.snackbar({
+                                    message: '已删除'
+                                });
+                                $(element).parents('.mdui-list-item').remove();
+                                // Todo: 加入撤回
+                            } else {
+                                mdui.alert("出现错误，请联系开发者庞礴");
+                            }
+                        })
+                        .catch(err => {
+                            console.log(err);
+                        });
+                }, () => {}, {
+                    confirmText: "删除",
+                    cancelText: "取消"
+                })
             })
         })
     })
