@@ -3,25 +3,25 @@
 }
 
 /* 表格 */
-.article-content-box>.article-text-box table {
+.article-content-box > .article-text-box table {
     border-collapse: collapse;
 }
 
-.article-content-box>.article-text-box table th,
-.article-content-box>.article-text-box table td {
+.article-content-box > .article-text-box table th,
+.article-content-box > .article-text-box table td {
     border: 1px solid #ccc;
     min-width: 50px;
     height: 20px;
     text-align: left;
 }
 
-.article-content-box>.article-text-box table th {
+.article-content-box > .article-text-box table th {
     background-color: #f1f1f1;
     text-align: center
 }
 
 /* 代码块 */
-.article-content-box>.article-text-box pre > code {
+.article-content-box > .article-text-box pre > code {
     display: block;
     border: 1px solid hsl(0, 0%, 91%);
     border-radius: 4px 4px;
@@ -32,7 +32,7 @@
 }
 
 /* 引用 */
-.article-content-box>.article-text-box blockquote {
+.article-content-box > .article-text-box blockquote {
     display: block;
     border-left: 8px solid #d0e5f2;
     padding: 10px 10px;
@@ -41,16 +41,46 @@
 }
 
 /* 列表 */
-.article-content-box>.article-text-box ul, .article-content-box>.article-text-box ol {
+.article-content-box > .article-text-box ul, .article-content-box > .article-text-box ol {
     margin: 10px 0 10px 20px;
 }
 
 /* 分割线 */
-.article-content-box>.article-text-box hr {
+.article-content-box > .article-text-box hr {
     display: block;
     width: 90%;
     margin: 20px auto;
     border: 0;
     height: 1px;
     background-color: #ccc;
+}
+
+.article-content-box > .article-text-box h1 {
+    margin: 30px 0 20px 0;
+    color: #1e3c72;
+    font-size: 2.2rem;
+}
+
+.article-content-box > .article-text-box h2 {
+    margin: 30px 0 20px 0;
+    color: #1e3c72;
+    font-size: 2rem;
+}
+
+.article-content-box > .article-text-box h3 {
+    margin: 30px 0 20px 0;
+    color: #1e3c72;
+    font-size: 1.8rem;
+}
+
+.article-content-box > .article-text-box h4 {
+    margin: 30px 0 20px 0;
+    color: #1e3c72;
+    font-size: 1.5rem;
+}
+
+.article-content-box > .article-text-box h5 {
+    margin: 30px 0 20px 0;
+    color: #1e3c72;
+    font-size: 1.2rem;
 }

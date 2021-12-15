@@ -122,17 +122,17 @@
                     <li>
                         <span>[教育教学]</span>
                         <a href="contents/notice/detail?aid=1" class="article-title">关于禁止校外外卖的通告</a>
-                        <span class="article-time">2021-11-24</span>
+                        <span class="article-time">2021-11-27</span>
                     </li>
                     <li>
                         <span>[教育教学]</span>
                         <a href="contents/notice/detail?aid=1" class="article-title">关于庞礴等14名预备党员同志转正的公示</a>
-                        <span class="article-time">2021-11-24</span>
+                        <span class="article-time">2021-11-26</span>
                     </li>
                     <li>
-                        <span>[教育教学]</span>
+                        <span>[学术动态]</span>
                         <a href="contents/notice/detail?aid=1" class="article-title">《正告东北农业大学贴吧》</a>
-                        <span class="article-time">2021-11-24</span>
+                        <span class="article-time">2021-11-25</span>
                     </li>
                     <li>
                         <span>[教育教学]</span>
@@ -140,9 +140,9 @@
                         <span class="article-time">2021-11-24</span>
                     </li>
                     <li>
-                        <span>[教育教学]</span>
+                        <span>[后勤保障]</span>
                         <a href="contents/notice/detail?aid=1" class="article-title">关于做好庞礴同学后勤保障工作的要求</a>
-                        <span class="article-time">2021-11-24</span>
+                        <span class="article-time">2021-11-20</span>
                     </li>
                 </ul>
             </div>
