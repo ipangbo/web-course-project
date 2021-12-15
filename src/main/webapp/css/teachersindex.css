@@ -52,6 +52,7 @@
     text-align: center;
     font-size: 18px;
     transition: color 0.3s;
+    color: #1e3c72;
 }
 
 .teacher-card > .teacher-title {
@@ -61,13 +62,13 @@
 }
 
 .article-box > ul > li > a:hover .teacher-card {
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(252, 252, 252);
     border: 1px solid #ddd;
-    box-shadow: #eee 0 0 10px;
+    box-shadow: #f8f8f8 0 0 10px;
 }
 
 .article-box > ul > li > a:hover .teacher-card h4 {
-    color: #1e3c72;
+    color: rgb(204, 133, 0);
 }
 
 .teacher-article-img {

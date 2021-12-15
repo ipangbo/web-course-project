@@ -65,8 +65,8 @@
                                     ${article.aAbstractHTML}
                             </div>
                             <div class="date-indicator">
-                                <div class="date-indicator-day"><fmt:formatDate pattern="dd" value="${article.aCreateTime}"/></div>
-                                <div class="date-indicator-month-year"><fmt:formatDate pattern="yyyy-MM" value="${article.aCreateTime}"/></div>
+                                <div class="date-indicator-day red-date-indicator-day"><fmt:formatDate pattern="dd" value="${article.aCreateTime}"/></div>
+                                <div class="date-indicator-month-year red-date-indicator-month-year"><fmt:formatDate pattern="yyyy-MM" value="${article.aCreateTime}"/></div>
                             </div>
                         </div>
                     </li>

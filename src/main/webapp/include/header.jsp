@@ -2,8 +2,8 @@
 <div class="header-box">
     <div class="header">
         <div class="core" id="header-core">
-            <div class="header-logo" title="东北林业大学计算机科学与技术专业"><a href="index.jsp" class="full-box-link"></a></div>
-            <div class="header-name" title="东北林业大学计算机科学与技术专业"><a href="index.jsp" class="full-box-link"></a></div>
+            <div class="header-logo" title="东北林业大学计算机科学与技术专业"><a href="." class="full-box-link"></a></div>
+            <div class="header-name" title="东北林业大学计算机科学与技术专业"><a href="." class="full-box-link"></a></div>
             <div class="major-name"></div>
             <div class="slogan"></div>
             <ul class="menu">
