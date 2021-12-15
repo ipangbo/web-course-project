@@ -43,6 +43,8 @@ $("#search-button").on('click', () => {
             <a
                     href="contents/news/article?aid=${item.id}"
                     class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
+                    target="_blank"
+                    mdui-tooltip="{content: '在前台页面显示'}"
             >
                 <i class="mdui-icon material-icons">find_in_page</i>
             </a>
@@ -54,12 +56,15 @@ $("#search-button").on('click', () => {
               delete-button
             "
                     data-article-index="${item.id}"
+                    mdui-tooltip="{content: '删除'}"
             >
                 <i class="mdui-icon material-icons">delete_forever</i>
             </button>
             <a
                     href="panel/modnews?aid=${item.id}"
                     class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
+                    target="_blank"
+                    mdui-tooltip="{content: '编辑'}"
             >
                 <i class="mdui-icon material-icons">mode_edit</i>
             </a>
@@ -102,4 +107,5 @@ $("#search-button").on('click', () => {
             console.log(err);
             mdui.alert("查询失败，请查看panel-search.js和控制台")
         });
+    mdui.mutation();
 })

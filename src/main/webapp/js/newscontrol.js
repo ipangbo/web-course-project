@@ -33,7 +33,6 @@ fetch("api/query-all-news")
     .then(resp => resp.json())
     .then(res => {
         res.forEach((item) => {
-            //let listItem = `<div class="mdui-list-item"><label class="mdui-checkbox"><input type="checkbox"/><i class="mdui-checkbox-icon"></i></label><div class="mdui-list-item-content">${item.title}</div><select class="mdui-select article-type-select"mdui-select><option value="1">综合新闻</option><option value="2">党团声音</option><option value="3">新媒精选</option></select><a href="contents/news/article?aid=${item.id}"class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"><i class="mdui-icon material-icons">find_in_page</i></a><button class="mdui-btn mdui-btn-icon mdui-ripple list-control-button red-list-control-button delete-button"data-article-index="${item.id}"><i class="mdui-icon material-icons">delete_forever</i></button><a href="panel/modnews?aid=${item.id}"class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"><i class="mdui-icon material-icons">mode_edit</i></a></div>`
             let listItem = `
         <div class="mdui-list-item" data-aid="${item.id}">
             <label class="mdui-checkbox">
@@ -49,6 +48,8 @@ fetch("api/query-all-news")
             <a
                     href="contents/news/article?aid=${item.id}"
                     class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
+                    target="_blank"
+                    mdui-tooltip="{content: '在前台页面查看'}"
             >
                 <i class="mdui-icon material-icons">find_in_page</i>
             </a>
@@ -60,12 +61,15 @@ fetch("api/query-all-news")
               delete-button
             "
                     data-article-index="${item.id}"
+                    mdui-tooltip="{content: '删除'}"
             >
                 <i class="mdui-icon material-icons">delete_forever</i>
             </button>
             <a
                     href="panel/modnews?aid=${item.id}"
                     class="mdui-btn mdui-btn-icon mdui-ripple list-control-button"
+                    target="_blank"
+                    mdui-tooltip="{content: '编辑'}"
             >
                 <i class="mdui-icon material-icons">mode_edit</i>
             </a>
@@ -73,7 +77,7 @@ fetch("api/query-all-news")
             $("#article-list").prepend(listItem);
         })
         mdui.mutation()
-        $(".article-type-select").each( (index, element) => {
+        $(".article-type-select").each((index, element) => {
             $(element).on('change', () => {
                 // console.log("aid" + $(element).attr('data-select-aid'))
                 // console.log("newval" + $(element).val())
@@ -96,7 +100,7 @@ fetch("api/query-all-news")
                     });
             })
         })
-        $('.delete-button').each( (index, element) => {
+        $('.delete-button').each((index, element) => {
             $(element).on('click', () => {
                 // console.log("aid" + $(element).parents('.mdui-list-item').attr('data-aid'))
                 // $(element).parents('.mdui-list-item').remove();
@@ -119,7 +123,8 @@ fetch("api/query-all-news")
                         .catch(err => {
                             console.log(err);
                         });
-                }, () => {}, {
+                }, () => {
+                }, {
                     confirmText: "删除",
                     cancelText: "取消"
                 })

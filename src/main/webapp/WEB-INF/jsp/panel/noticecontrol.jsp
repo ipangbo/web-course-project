@@ -39,7 +39,9 @@
         <a href="panel" class="mdui-typo-headline">磅礴新闻网管理系统</a>
         <a href="javascript:;" class="mdui-typo-title">通知管理</a>
         <div class="mdui-toolbar-spacer"></div>
-        <a href="panel?page=search" class="mdui-btn mdui-btn-icon mdui-ripple" id="panel-search-button"><i
+        <a href="." class="mdui-btn mdui-btn-icon mdui-ripple" target="_blank" mdui-tooltip="{content: '回到前台页面'}"><i
+                class="mdui-icon material-icons">home</i></a>
+        <a href="panel?page=search" class="mdui-btn mdui-btn-icon mdui-ripple" id="panel-search-button" mdui-tooltip="{content: '搜索'}"><i
                 class="mdui-icon material-icons">search</i></a>
     </div>
 </div>

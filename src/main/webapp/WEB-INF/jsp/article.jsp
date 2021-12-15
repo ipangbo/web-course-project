@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/newsindex.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/wangEditor-recommend-article.css">
     <link rel="stylesheet" href="css/article.css">
 </head>
 <body>

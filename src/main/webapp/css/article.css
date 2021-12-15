@@ -54,6 +54,10 @@
 
 }
 
+.article-content-box>.article-text-box table {
+    margin: 20px auto;
+}
+
 .article-content-box>.article-text-box video {
     max-width: 95%;
     margin: 15px;
