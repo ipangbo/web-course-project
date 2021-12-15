@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <c:url var="base" value="/"></c:url>
     <base href="${base}">
-    <title>Title</title>
+    <title>我校帽儿山教学区首次记录到国家重点保护动物黑熊和马鹿我校帽儿山教学区首次记录到国家重点保护动物黑熊和马鹿</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
           integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
@@ -63,6 +63,9 @@
                 <span>文字：陈健</span>
             </div>
             <div class="article-text-box">
+                <p>
+                    <b>所有的通知公告都是静态页面，仅作展示用，新闻网是动态页面。</b>
+                </p>
                 <p>
                     近日，帽儿山教学区在野生动物监测方面获得了重要发现。工作人员在定期收集尖砬沟施业区内红外相机影像资料时，相继发现黑熊（Ursus thibetanu）、马鹿（Cervus
                     elaphus）、狍（Capreolus pygargus bedfordi）、野猪（Sus scrofa）、獾（Meles meles）、黄鼬（Mustela

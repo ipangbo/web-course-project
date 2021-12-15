@@ -46,9 +46,9 @@
     <div class="core">
         <div class="sidebar">
             <ul>
-                <li><a href="contents/notice/jyjx.jsp">教育教学</a></li>
-                <li><a href="contents/notice/xsdt.jsp">学术动态</a></li>
-                <li><a href="contents/notice/hqbz.jsp">后勤保障</a></li>
+                <li><a href="contents/notice?page=jyjx">教育教学</a></li>
+                <li><a href="contents/notice?page=xsdt">学术动态</a></li>
+                <li><a href="contents/notice?page=hqbz">后勤保障</a></li>
             </ul>
         </div>
         <div class="article-box">
