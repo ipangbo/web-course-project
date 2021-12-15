@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
-public class GetPanelCountService {
+public class GetPanelStatDataService {
     public int getPanelNewsCount() {
         int newsCount = 0;
         String sql = "SELECT COUNT(*) FROM NEWS";

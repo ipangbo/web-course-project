@@ -1,6 +1,6 @@
 package cn.ipangbo.controller;
 
-import cn.ipangbo.service.GetPanelCountService;
+import cn.ipangbo.service.GetPanelStatDataService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +23,7 @@ public class PanelServlet extends HttpServlet {
         } else if ("search".equals(param)) {
             req.getRequestDispatcher("/WEB-INF/jsp/panel/search.jsp").forward(req, resp);
         } else {
-            GetPanelCountService service = new GetPanelCountService();
+            GetPanelStatDataService service = new GetPanelStatDataService();
             req.setAttribute("newsCount", service.getPanelNewsCount());
             req.setAttribute("lastDate", service.getPanelNewsLastTime());
             req.getRequestDispatcher("/WEB-INF/jsp/panel/panel.jsp").forward(req, resp);
