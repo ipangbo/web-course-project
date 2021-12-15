@@ -19,12 +19,10 @@ public class PanelSearchAPIServlet extends HttpServlet {
         String json = reader.readLine();
 //        System.out.println(json);
         reader.close();
-        System.out.println(json);
 
         PanelSearchAPIService service = new PanelSearchAPIService();
         String jsonOutput = service.search(json);
 
-        System.out.println(jsonOutput);
         resp.setContentType("application/json;charset=utf-8");
         PrintWriter out = resp.getWriter();
         out.write(jsonOutput);
