@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/jobindex.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/intro-page.css">
     <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
@@ -44,13 +45,7 @@
 </div>
 <div class="content-box">
     <div class="core">
-        <div class="sidebar">
-            <ul>
-                <li><a href="contents/job?page=zpzx">招聘中心</a></li>
-                <li><a href="contents/job?page=cxcy">创新创业</a></li>
-                <li><a href="contents/job?page=gjhz">国际合作</a></li>
-            </ul>
-        </div>
+        <%@ include file="/include/sidebar/job-sidebar.jsp"%>
         <div class="article-box">
             <h2>
                 东北林业大学毕业生就业指导中心组织机构

@@ -40,17 +40,11 @@
             <i class="mdui-icon material-icons">local_offer</i>
             您现在的位置：<a href="index.jsp">首页</a> >> <a href="contents/major">专业介绍</a> >> 方向简介
         </div>
-
     </div>
 </div>
 <div class="content-box">
     <div class="core">
-        <div class="sidebar">
-            <ul>
-                <li><a href="contents/major?page=zyjj">专业简介</a></li>
-                <li><a href="contents/major?page=fxjj">方向简介</a></li>
-            </ul>
-        </div>
+        <%@ include file="/include/sidebar/major-sidebar.jsp"%>
         <div class="article-box">
             <h2>东北林业大学奥林学院大数据方向</h2>
             <div class="article-text-box">

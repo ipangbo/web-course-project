@@ -46,12 +46,7 @@
 </div>
 <div class="content-box">
     <div class="core">
-        <div class="sidebar">
-            <ul>
-                <li><a href="contents/major?page=zyjj">专业简介</a></li>
-                <li><a href="contents/major?page=fxjj">方向简介</a></li>
-            </ul>
-        </div>
+        <%@ include file="/include/sidebar/major-sidebar.jsp"%>
         <div class="article-box">
             <h2>计算机科学与技术专业</h2>
             <div class="article-text-box">

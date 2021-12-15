@@ -46,13 +46,7 @@
 </div>
 <div class="content-box">
     <div class="core">
-        <div class="sidebar">
-            <ul>
-                <li><a href="contents/notice/jyjx.jsp">教育教学</a></li>
-                <li><a href="contents/notice/xsdt.jsp">学术动态</a></li>
-                <li><a href="contents/notice/hqbz.jsp">后勤保障</a></li>
-            </ul>
-        </div>
+        <%@ include file="/include/sidebar/notice-sidebar.jsp"%>
         <div class="article-content-box">
             <div class="article-title-box">
                 <h2>

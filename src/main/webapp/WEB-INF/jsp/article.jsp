@@ -47,13 +47,7 @@
 </div>
 <div class="content-box">
     <div class="core">
-        <div class="sidebar">
-            <ul>
-                <li><a href="contents/news?page=zhxw">综合新闻</a></li>
-                <li><a href="contents/news?page=dtsy" class="red-sidebar-menu-item">党团声音</a></li>
-                <li><a href="contents/news?page=xmjx">新媒精选</a></li>
-            </ul>
-        </div>
+        <%@ include file="/include/sidebar/news-sidebar.jsp"%>
         <div class="article-content-box">
             <div class="article-title-box">
                 <h2>

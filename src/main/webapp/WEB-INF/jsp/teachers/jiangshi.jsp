@@ -40,17 +40,20 @@
 </div>
 <div class="content-box">
     <div class="core">
-        <div class="sidebar">
-            <ul>
-                <li><a href="contents/teachers?page=js">教授</a></li>
-                <li><a href="contents/teachers?page=fjs">副教授</a></li>
-                <li><a href="contents/teachers?page=jiangshi">讲师</a></li>
-            </ul>
-        </div>
+        <%@ include file="/include/sidebar/teachers-sidebar.jsp"%>
         <div class="article-box">
             <ul>
                 <li>
-                    <a href="contents/teachers/detail?aid=1">
+                    <a href="contents/teachers/detail?tid=2">
+                        <div class="teacher-card">
+                            <img src="https://icec.nefu.edu.cn/__local/1/3F/53/080C34477886766CDF935DCF4C1_EA2C9277_C142.png" alt="教师照片" class="teacher-img">
+                            <h4>董素宇</h4>
+                            <div class="teacher-title">讲师</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="contents/teachers/detail?tid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -59,7 +62,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/detail?aid=1">
+                    <a href="contents/teachers/detail?tid=2">
+                        <div class="teacher-card">
+                            <img src="https://icec.nefu.edu.cn/__local/1/3F/53/080C34477886766CDF935DCF4C1_EA2C9277_C142.png" alt="教师照片" class="teacher-img">
+                            <h4>董素宇</h4>
+                            <div class="teacher-title">讲师</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="contents/teachers/detail?tid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -68,7 +80,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/detail?aid=1">
+                    <a href="contents/teachers/detail?tid=2">
+                        <div class="teacher-card">
+                            <img src="https://icec.nefu.edu.cn/__local/1/3F/53/080C34477886766CDF935DCF4C1_EA2C9277_C142.png" alt="教师照片" class="teacher-img">
+                            <h4>董素宇</h4>
+                            <div class="teacher-title">讲师</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="contents/teachers/detail?tid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -77,7 +98,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/detail?aid=1">
+                    <a href="contents/teachers/detail?tid=2">
+                        <div class="teacher-card">
+                            <img src="https://icec.nefu.edu.cn/__local/1/3F/53/080C34477886766CDF935DCF4C1_EA2C9277_C142.png" alt="教师照片" class="teacher-img">
+                            <h4>董素宇</h4>
+                            <div class="teacher-title">讲师</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="contents/teachers/detail?tid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>
@@ -86,52 +116,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/detail?aid=1">
+                    <a href="contents/teachers/detail?tid=2">
                         <div class="teacher-card">
-                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
-                            <h4>王波</h4>
+                            <img src="https://icec.nefu.edu.cn/__local/1/3F/53/080C34477886766CDF935DCF4C1_EA2C9277_C142.png" alt="教师照片" class="teacher-img">
+                            <h4>董素宇</h4>
                             <div class="teacher-title">讲师</div>
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a href="contents/teachers/detail?aid=1">
-                        <div class="teacher-card">
-                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
-                            <h4>王波</h4>
-                            <div class="teacher-title">讲师</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="contents/teachers/detail?aid=1">
-                        <div class="teacher-card">
-                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
-                            <h4>王波</h4>
-                            <div class="teacher-title">讲师</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="contents/teachers/detail?aid=1">
-                        <div class="teacher-card">
-                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
-                            <h4>王波</h4>
-                            <div class="teacher-title">讲师</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="contents/teachers/detail?aid=1">
-                        <div class="teacher-card">
-                            <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
-                            <h4>王波</h4>
-                            <div class="teacher-title">讲师</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="contents/teachers/detail?aid=1">
+                    <a href="contents/teachers/detail?tid=1">
                         <div class="teacher-card">
                             <img src="https://tc.qn.ipangbo.cn/image/wb.jpg" alt="教师照片" class="teacher-img">
                             <h4>王波</h4>

@@ -46,13 +46,7 @@
 </div>
 <div class="content-box">
     <div class="core">
-        <div class="sidebar">
-            <ul>
-                <li><a href="contents/lab?page=923">923 创新实验室</a></li>
-                <li><a href="contents/lab?page=925">925 移动开发实验室</a></li>
-                <li><a href="contents/lab?page=999">999 天台实验室</a></li>
-            </ul>
-        </div>
+        <%@ include file="/include/sidebar/lab-sidebar.jsp"%>
         <div class="article-box">
             <h2>
                 东北林业大学计算机科学与技术专业计算机基础教育与实验中心

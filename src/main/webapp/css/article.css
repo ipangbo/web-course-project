@@ -66,3 +66,13 @@
 .article-content-box>.article-text-box .teacher-article-img {
     width: 25%;
 }
+
+/*以下是教师详情页面email卡片*/
+#email-chip {
+    margin-top: 30px;
+}
+
+#email-chip .mdui-chip-title {
+    margin-right: 10px;
+    font-size: 15px;
+}
