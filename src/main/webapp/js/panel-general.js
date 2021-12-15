@@ -26,3 +26,7 @@ $("#logout-button").on('click', () => {
         }
     )
 })
+
+$("#setting-button").on('click', () => {
+    mdui.alert("由于只有一个admin用户，所以不用修改账户。未来将加入修改密码功能。")
+})

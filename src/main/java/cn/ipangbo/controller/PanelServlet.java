@@ -23,9 +23,7 @@ public class PanelServlet extends HttpServlet {
         } else if ("search".equals(param)) {
             req.getRequestDispatcher("/WEB-INF/jsp/panel/search.jsp").forward(req, resp);
         } else {
-            GetPanelStatDataService service = new GetPanelStatDataService();
-            req.setAttribute("newsCount", service.getPanelNewsCount());
-            req.setAttribute("lastDate", service.getPanelNewsLastTime());
+
             req.getRequestDispatcher("/WEB-INF/jsp/panel/panel.jsp").forward(req, resp);
         }
     }
