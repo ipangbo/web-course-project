@@ -1,6 +1,6 @@
 package cn.ipangbo.controller;
 
-import cn.ipangbo.service.GetEchoDataAPIService;
+import cn.ipangbo.service.GetEchoNewsDataAPIService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +16,7 @@ public class GetEchoDataAPIServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int aid = Integer.parseInt(req.getParameter("aid"));
 
-        GetEchoDataAPIService service = new GetEchoDataAPIService();
+        GetEchoNewsDataAPIService service = new GetEchoNewsDataAPIService();
         String jsonOutput = service.getEchoData(aid);
 
         resp.setContentType("application/json;charset=utf-8");

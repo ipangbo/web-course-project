@@ -1,8 +1,5 @@
 package cn.ipangbo.controller;
 
-import cn.ipangbo.entity.NewsArticle;
-import cn.ipangbo.service.GetArticleDetailService;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

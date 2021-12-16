@@ -1,5 +1,7 @@
 package cn.ipangbo.service;
 
+import cn.ipangbo.dao.NewsDao;
+import cn.ipangbo.dao.NewsDaoImpl;
 import cn.ipangbo.entity.PanelStatData;
 import cn.ipangbo.utils.DataSourceUtils;
 import com.alibaba.fastjson.JSON;
@@ -14,34 +16,14 @@ import java.util.Date;
 import java.util.List;
 
 public class GetPanelStatDataService {
+    private NewsDao dao = new NewsDaoImpl();
+
     public int getPanelNewsCount() {
-        int newsCount = 0;
-        String sql = "SELECT COUNT(*) FROM NEWS";
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql);
-             ResultSet rs = st.executeQuery()) {
-            while (rs.next()) {
-                newsCount = rs.getInt(1);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return newsCount;
+        return dao.getNewsCount();
     }
 
     public Date getPanelNewsLastTime() {
-        Date lastDate = new Date();
-        String sql = "SELECT AMODIFYTIME FROM NEWS ORDER BY AID DESC LIMIT 1";
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql);
-             ResultSet rs = st.executeQuery()) {
-            while (rs.next()) {
-                lastDate = rs.getTimestamp(1);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return lastDate;
+        return dao.getNewsLastTime();
     }
 
     public String getPanelStatData() {

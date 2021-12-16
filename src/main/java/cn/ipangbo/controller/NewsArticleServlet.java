@@ -1,7 +1,7 @@
 package cn.ipangbo.controller;
 
 import cn.ipangbo.entity.NewsArticle;
-import cn.ipangbo.service.GetArticleDetailService;
+import cn.ipangbo.service.GetNewsDetailService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,8 +16,8 @@ public class NewsArticleServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int aid = Integer.parseInt(req.getParameter("aid"));
 
-        GetArticleDetailService service = new GetArticleDetailService();
-        NewsArticle news = service.getArticleDetailService(aid);
+        GetNewsDetailService service = new GetNewsDetailService();
+        NewsArticle news = service.getNewsDetailService(aid);
 
         req.setAttribute("article", news);
         req.getRequestDispatcher("/WEB-INF/jsp/article.jsp").forward(req, resp);

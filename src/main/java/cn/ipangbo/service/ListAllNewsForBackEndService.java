@@ -10,12 +10,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class QuerySingleNewsAPIService {
-    public String querySingleNews(int aid) {
+public class ListAllNewsForBackEndService {
+    public String listAllNews() {
         NewsDao dao = new NewsDaoImpl();
 
-        String jsonOutput = JSON.toJSONString(dao.querySingleNews(aid));
+        String jsonOutput = JSON.toJSONString(dao.listAllNewsForBackEnd());
+
         return jsonOutput;
     }
 }

@@ -1,5 +1,7 @@
 package cn.ipangbo.service;
 
+import cn.ipangbo.dao.NewsDao;
+import cn.ipangbo.dao.NewsDaoImpl;
 import cn.ipangbo.entity.NewsArticle;
 import cn.ipangbo.utils.DataSourceUtils;
 import com.alibaba.fastjson.JSON;
@@ -22,52 +24,8 @@ public class PanelSearchAPIService {
         int category = jb.getIntValue("category");
         boolean isSearchTitleOnly = jb.getBooleanValue("is-search-title-only");
 
-        // 编写sql语句
-        String sql = "";
-        String tableName = "NEWS";
-        switch (category) {
-            case 0:
-                tableName = "NEWS";
-                break;
-            case 1:
-                tableName = "NEWS";
-                break;
-            case 2:
-                tableName = "NOTICE";
-                break;
-            case 3:
-                tableName = "TEACHERS";
-                break;
-        }
-        if (isSearchTitleOnly) {
-            sql = "SELECT AID, ATITLE, ACATEGORY FROM " + tableName + " WHERE ATITLE LIKE ?";
-        } else {
-            sql = "SELECT AID, ATITLE, ACATEGORY FROM " + tableName + " WHERE ATITLE LIKE ? OR ACONTENTJSON LIKE ?";
-        }
-
-        // 执行sql查询，完成业务逻辑
-        NewsArticle news = null;
-        List<NewsArticle> articleList = new ArrayList<>();
-        String jsonOutput = "";
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql)) {
-            st.setString(1, "%" + key + "%");
-            if (!isSearchTitleOnly) {
-                st.setString(2, "%" + key + "%");
-            }
-            try (ResultSet rs = st.executeQuery()) {
-                while (rs.next()) {
-                    news = new NewsArticle();
-                    news.setAid(rs.getInt(1));
-                    news.setaTitle(rs.getString(2));
-                    news.setaCategory(rs.getInt(3));
-                    articleList.add(news);
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        jsonOutput = JSON.toJSONString(articleList);
+        NewsDao dao = new NewsDaoImpl();
+        String jsonOutput = JSON.toJSONString(dao.search(category, key, isSearchTitleOnly));
         return jsonOutput;
     }
 }

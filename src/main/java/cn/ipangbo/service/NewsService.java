@@ -1,5 +1,7 @@
 package cn.ipangbo.service;
 
+import cn.ipangbo.dao.NewsDao;
+import cn.ipangbo.dao.NewsDaoImpl;
 import cn.ipangbo.entity.NewsArticle;
 import cn.ipangbo.utils.DataSourceUtils;
 
@@ -11,47 +13,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NewsService {
-    private final List<NewsArticle> allNews = new ArrayList<>();
-
-    private List<NewsArticle> getNewsArticles(String sql) {
-        allNews.clear();
-        NewsArticle news = null;
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql);
-             ResultSet rs = st.executeQuery()) {
-            while (rs.next()) {
-                news = new NewsArticle();
-                news.setAid(rs.getInt(1));
-                news.setaTitle(rs.getString(2));
-                news.setaAbstractHTML(rs.getString(3));
-                news.setaCategory(rs.getInt(4));
-                news.setaCreateTime(rs.getDate(5));
-                allNews.add(news);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return allNews;
-    }
+    private NewsDao dao = new NewsDaoImpl();
 
     public List<NewsArticle> getAllZHXWArticles() {
-        String sql = "SELECT AID, ATITLE, AABSTRACTHTML, ACATEGORY, ACREATETIME FROM NEWS WHERE ACATEGORY=1 ORDER BY AID DESC";
-        return getNewsArticles(sql);
+        return dao.listAllNewsForFrontEnd(1);
     }
 
     public List<NewsArticle> getAllDTSYArticles() {
-        String sql = "SELECT AID, ATITLE, AABSTRACTHTML, ACATEGORY, ACREATETIME FROM NEWS WHERE ACATEGORY=2 ORDER BY AID DESC";
-        return getNewsArticles(sql);
+        return dao.listAllNewsForFrontEnd(2);
     }
 
     public List<NewsArticle> getAllXMJXArticles() {
-        String sql = "SELECT AID, ATITLE, AABSTRACTHTML, ACATEGORY, ACREATETIME FROM NEWS WHERE ACATEGORY=3 ORDER BY AID DESC";
-        return getNewsArticles(sql);
+        return dao.listAllNewsForFrontEnd(3);
     }
 
     public List<NewsArticle> getAllArticles() {
-        String sql = "SELECT AID, ATITLE, AABSTRACTHTML, ACATEGORY, ACREATETIME FROM NEWS ORDER BY AID DESC";
-        return getNewsArticles(sql);
+        return dao.listAllNewsForFrontEnd(0);
     }
 
 

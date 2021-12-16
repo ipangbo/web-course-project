@@ -1,8 +1,8 @@
 package cn.ipangbo.controller;
 
 import cn.ipangbo.entity.NewsArticle;
-import cn.ipangbo.service.GetEchoNewsService;
-import cn.ipangbo.service.SubmitArticleModifyService;
+import cn.ipangbo.service.GetEchoNewsDataService;
+import cn.ipangbo.service.SubmitNewsArticleModifyService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +20,7 @@ public class EditNewsServlet extends HttpServlet {
         // 在panel请求编辑数据后的逻辑
         int aid = Integer.parseInt(req.getParameter("aid"));
 
-        GetEchoNewsService service = new GetEchoNewsService();
+        GetEchoNewsDataService service = new GetEchoNewsDataService();
         NewsArticle news = service.getEchoNews(aid);
 
         req.setAttribute("newsToEcho", news);
@@ -36,7 +36,7 @@ public class EditNewsServlet extends HttpServlet {
 //        System.out.println(json);
         reader.close();
 
-        SubmitArticleModifyService service = new SubmitArticleModifyService();
+        SubmitNewsArticleModifyService service = new SubmitNewsArticleModifyService();
         if (service.submitArticleModify(json) == 1) {
             PrintWriter out = resp.getWriter();
             out.write("{\"res\":\"failed\"}");

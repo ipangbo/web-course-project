@@ -1,5 +1,8 @@
 package cn.ipangbo.service;
 
+import cn.ipangbo.dao.NewsDao;
+import cn.ipangbo.dao.NewsDaoImpl;
+import cn.ipangbo.entity.NewsArticle;
 import cn.ipangbo.utils.DataSourceUtils;
 import com.alibaba.fastjson.JSONObject;
 
@@ -7,7 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class SubmitArticleModifyService {
+public class SubmitNewsArticleModifyService {
     public int submitArticleModify(String json) {
 //        处理json
         JSONObject jb = JSONObject.parseObject(json);
@@ -19,22 +22,16 @@ public class SubmitArticleModifyService {
         String articleAbstractJSON = jb.getString("article-abstract-json");
         String articleAbstractHTML = jb.getString("article-abstract-html");
 
-//        存入数据库
-        String sql = "UPDATE NEWS SET ATITLE=?, AAUTHOR=?, ACONTENTJSON=?, ACONTENTHTML=?, AABSTRACTJSON=?, AABSTRACTHTML=? WHERE AID=?";
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql)) {
-            st.setString(1, articleTitle);
-            st.setString(2, articleAuthor);
-            st.setString(3, articleContentJSON);
-            st.setString(4, articleContentHTML);
-            st.setString(5, articleAbstractJSON);
-            st.setString(6, articleAbstractHTML);
-            st.setInt(7, aid);
-            st.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return 1;
-        }
-        return 0;
+        NewsArticle news = new NewsArticle();
+        news.setAid(aid);
+        news.setaTitle(articleTitle);
+        news.setaAuthor(articleAuthor);
+        news.setaContentJSON(articleContentJSON);
+        news.setaContentHTML(articleContentHTML);
+        news.setaAbstractJSON(articleAbstractJSON);
+        news.setaAbstractHTML(articleAbstractHTML);
+
+        NewsDao dao = new NewsDaoImpl();
+        return dao.submitNewsArticleModify(news);
     }
 }

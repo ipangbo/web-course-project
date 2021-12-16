@@ -2,20 +2,17 @@ package cn.ipangbo.service;
 
 import cn.ipangbo.dao.NewsDao;
 import cn.ipangbo.dao.NewsDaoImpl;
+import cn.ipangbo.entity.NewsArticle;
 import cn.ipangbo.utils.DataSourceUtils;
-import com.alibaba.fastjson.JSONObject;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DeleteNewsAPIService {
-    public int deleteNews(String json) {
-//        处理json
-        JSONObject jb = JSONObject.parseObject(json);
-        int aid = jb.getIntValue("aid");
-
+public class GetNewsDetailService {
+    public NewsArticle getNewsDetailService(int aid) {
         NewsDao dao = new NewsDaoImpl();
-        return dao.deleteNews(aid);
+        return dao.getNewsDetail(aid);
     }
 }
