@@ -4,9 +4,11 @@ import cn.ipangbo.dao.NewsDao;
 import cn.ipangbo.dao.NewsDaoImpl;
 import cn.ipangbo.entity.NewsArticle;
 
-public class GetNewsDetailService {
-    public NewsArticle getNewsDetailService(int aid) {
+import java.util.List;
+
+public class GetTop5Service {
+    public List<NewsArticle> getTop5News() {
         NewsDao dao = new NewsDaoImpl();
-        return dao.getNewsDetail(aid);
+        return dao.getTop5News();
     }
 }

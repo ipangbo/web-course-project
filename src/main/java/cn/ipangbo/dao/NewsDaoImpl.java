@@ -313,4 +313,26 @@ public class NewsDaoImpl implements NewsDao {
         }
         return 0;
     }
+
+    @Override
+    public List<NewsArticle> getTop5News() {
+        List<NewsArticle> top5News = new ArrayList<>();
+        NewsArticle news = null;
+        String sql = "SELECT AID, ATITLE, ACATEGORY, ACREATETIME FROM NEWS ORDER BY AID DESC LIMIT 5";
+        try (Connection conn = DataSourceUtils.getConnection();
+             PreparedStatement st = conn.prepareStatement(sql);
+             ResultSet rs = st.executeQuery()) {
+            while (rs.next()) {
+                news = new NewsArticle();
+                news.setAid(rs.getInt(1));
+                news.setaTitle(rs.getString(2));
+                news.setaCategory(rs.getInt(3));
+                news.setaCreateTime(rs.getDate(4));
+                top5News.add(news);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return top5News;
+    }
 }

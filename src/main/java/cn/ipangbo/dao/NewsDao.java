@@ -45,6 +45,9 @@ public interface NewsDao {
     // 提交对新闻的更改，成功返回0
     public int submitNewsArticleModify(NewsArticle news);
 
+    // 在查询首页的前五条新闻
+    public List<NewsArticle> getTop5News();
+
 
 
 }

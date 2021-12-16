@@ -1,6 +1,7 @@
 package cn.ipangbo.filter;
 
 import cn.ipangbo.entity.NewsArticle;
+import cn.ipangbo.service.GetTop5Service;
 import cn.ipangbo.utils.DataSourceUtils;
 import com.alibaba.fastjson.JSON;
 
@@ -22,24 +23,9 @@ import java.util.List;
 public class IndexFilter extends HttpFilter {
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
-        List<NewsArticle> top5News = new ArrayList<>();
-        NewsArticle news = null;
-        String sql = "SELECT AID, ATITLE, ACATEGORY, ACREATETIME FROM NEWS ORDER BY AID DESC LIMIT 5";
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql);
-             ResultSet rs = st.executeQuery()) {
-            while (rs.next()) {
-                news = new NewsArticle();
-                news.setAid(rs.getInt(1));
-                news.setaTitle(rs.getString(2));
-                news.setaCategory(rs.getInt(3));
-                news.setaCreateTime(rs.getDate(4));
-                top5News.add(news);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        req.setAttribute("top5News", top5News);
+        GetTop5Service service = new GetTop5Service();
+
+        req.setAttribute("top5News", service.getTop5News());
         chain.doFilter(req, res);
     }
 }
