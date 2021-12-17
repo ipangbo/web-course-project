@@ -28,6 +28,7 @@ $("#search-button").on('click', () => {
         .then(res => {
             // 返回的内容是[{}, {}]
             res.forEach(item => {
+
                 let listItem = `
         <div class="mdui-list-item" data-aid="${item.id}">
             <label class="mdui-checkbox">

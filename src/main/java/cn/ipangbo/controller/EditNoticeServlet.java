@@ -23,8 +23,9 @@ public class EditNoticeServlet extends HttpServlet {
         GetEchoNoticeDataService service = new GetEchoNoticeDataService();
         NoticeArticle notice = service.getEchoNotice(aid);
 
-        req.setAttribute("noticeToEcho", notice);
-        req.setAttribute("action", "编辑文章");
+        req.setAttribute("type", "notice");
+        req.setAttribute("dataToEcho", notice);
+        req.setAttribute("action", "编辑通知");
         req.getRequestDispatcher("/WEB-INF/jsp/panel/editorecho.jsp").forward(req, resp);
     }
 

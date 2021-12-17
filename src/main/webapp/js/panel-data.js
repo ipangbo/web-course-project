@@ -14,6 +14,6 @@ fetch("api/panel-stat-data")
             <div class="data-card-info-box">上次发布时间：${item["last-date"]}</div>
         </div>`;
             //html结束
-            $(".data-card-box").prepend(dataCard);
+            $(".data-card-box").append(dataCard);
         })
     })

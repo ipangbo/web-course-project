@@ -30,7 +30,7 @@
       mdui-appbar-with-toolbar
       mdui-theme-primary-blue-grey
       mdui-drawer-body-left
-    " id="mdui-title-bar">
+    " id="mdui-title-bar" data-type="${type}">
 <div class="mdui-appbar mdui-appbar-fixed">
     <div class="mdui-toolbar mdui-color-theme">
         <a href="javascript:;" class="mdui-btn mdui-btn-icon" id="drawer-toggle-button"><i class="mdui-icon material-icons">menu</i></a>
@@ -54,10 +54,10 @@
     <div id="content">
         <div id="editor-content-container" class="editor-container">
             <div id="title-container">
-                <input type="text" name="article-title" placeholder="请输入标题" value="${newsToEcho.aTitle}"><br>
-                <input type="text" name="article-author" id="article-author" placeholder="发布单位" value="${newsToEcho.aAuthor}">
+                <input type="text" name="article-title" placeholder="请输入标题" value="${dataToEcho.aTitle}"><br>
+                <input type="text" name="article-author" id="article-author" placeholder="发布单位" value="${dataToEcho.aAuthor}">
             </div>
-            <div id="editor-text-area" data-aid="${newsToEcho.aid}"></div>
+            <div id="editor-text-area" data-aid="${dataToEcho.aid}"></div>
         </div>
         <h2>摘要</h2>
         <div id="editor-abstract-container" class="editor-container">

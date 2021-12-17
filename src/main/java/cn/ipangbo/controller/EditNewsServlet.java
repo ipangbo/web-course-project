@@ -23,7 +23,8 @@ public class EditNewsServlet extends HttpServlet {
         GetEchoNewsDataService service = new GetEchoNewsDataService();
         NewsArticle news = service.getEchoNews(aid);
 
-        req.setAttribute("newsToEcho", news);
+        req.setAttribute("type", "news");
+        req.setAttribute("dataToEcho", news);
         req.setAttribute("action", "编辑文章");
         req.getRequestDispatcher("/WEB-INF/jsp/panel/editorecho.jsp").forward(req, resp);
     }

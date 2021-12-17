@@ -101,16 +101,7 @@
 
 <div class="content-box">
     <div class="data-card-box">
-        <div class="data-card">
-            <div class="data-card-title-box">
-                <i class="mdui-list-item-icon mdui-icon material-icons"
-                >notifications</i
-                >
-                <span class="data-card-title">公告总数</span>
-            </div>
-            <div class="data-card-data-box">99</div>
-            <div class="data-card-info-box">上次发布时间：2021-12-8 12:30</div>
-        </div>
+
         <div class="data-card">
             <div class="data-card-title-box">
                 <i class="mdui-list-item-icon mdui-icon material-icons"
@@ -126,7 +117,7 @@
     <br>
     <br>
     <br>
-    <b style="display: block; padding: 70px; color: #555;">提示：由于只有新闻是动态页面，公告和教师均是静态页面，所以只有新闻的数据是真实数据，从数据库中查出</b>
+    <b style="display: block; padding: 70px; color: #555;">提示：由于只有新闻和公告是动态页面，教师是静态页面，所以只有新闻和公告的数据是真实数据，从数据库中查出</b>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>

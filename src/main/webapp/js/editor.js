@@ -105,24 +105,46 @@ $("#editor-save-dialog-ok").on('click', function () {
             return response.json(); // parses JSON response into native JavaScript objects
         }
 
-        postData('panel/addnews', {
-            "article-title": articleTitle,
-            "article-author": articleAuthor,
-            "article-content-html": articleContentHTML,
-            "article-content-json": articleContentJSON,
-            "article-abstract-html": articleAbstractHTML,
-            "article-abstract-json": articleAbstractJSON
-        })
-            .then(data => {
-                if (data.res === "ok") {
-                    location.replace("./panel?page=news")
-                } else {
-                    mdui.alert("出现错误，请联系开发者庞礴");
-                }
+        let body = $("body")
+        if (body.attr("data-type") === "news") {
+            postData('panel/addnews', {
+                "article-title": articleTitle,
+                "article-author": articleAuthor,
+                "article-content-html": articleContentHTML,
+                "article-content-json": articleContentJSON,
+                "article-abstract-html": articleAbstractHTML,
+                "article-abstract-json": articleAbstractJSON
             })
-            .catch(err => {
-                console.log(err);
-            });
+                .then(data => {
+                    if (data.res === "ok") {
+                        location.replace("./panel?page=news")
+                    } else {
+                        mdui.alert("出现错误，请联系开发者庞礴");
+                    }
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        } else if (body.attr("data-type") === "notice"){
+            postData('panel/addnotice', {
+                "article-title": articleTitle,
+                "article-author": articleAuthor,
+                "article-content-html": articleContentHTML,
+                "article-content-json": articleContentJSON,
+                "article-abstract-html": articleAbstractHTML,
+                "article-abstract-json": articleAbstractJSON
+            })
+                .then(data => {
+                    if (data.res === "ok") {
+                        location.replace("./panel?page=notice")
+                    } else {
+                        mdui.alert("出现错误，请联系开发者庞礴");
+                    }
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        }
     }
 })
 

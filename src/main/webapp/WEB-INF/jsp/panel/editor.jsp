@@ -30,7 +30,7 @@
       mdui-appbar-with-toolbar
       mdui-theme-primary-blue-grey
       mdui-drawer-body-left
-    " id="mdui-title-bar">
+    " id="mdui-title-bar" data-type="${type}">
 <div class="mdui-appbar mdui-appbar-fixed">
     <div class="mdui-toolbar mdui-color-theme">
         <a href="javascript:;" class="mdui-btn mdui-btn-icon" id="drawer-toggle-button"><i class="mdui-icon material-icons">menu</i></a>
