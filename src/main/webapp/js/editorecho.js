@@ -5,7 +5,7 @@ let editor = null;
 let abstractEditor = null;
 // console.log($('#editor-text-area').attr('data-aid'))
 let aid = $('#editor-text-area').attr('data-aid')
-fetch(`api/get-echo-data?aid=${aid}`)
+fetch(`api/get-news-echo-data?aid=${aid}`)
     .then(resp => resp.json())
     .then(res => {
         const wangEditor = window.wangEditor; // 全局变量

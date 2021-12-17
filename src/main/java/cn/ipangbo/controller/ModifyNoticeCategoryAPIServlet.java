@@ -1,6 +1,6 @@
 package cn.ipangbo.controller;
 
-import cn.ipangbo.service.AddNoticeService;
+import cn.ipangbo.service.ModifyNoticeCategoryAPIService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,15 +11,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/panel/addnotice")
-public class AddNoticeServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("type", "notice");
-        req.setAttribute("action", "新建通知");
-        req.getRequestDispatcher("/WEB-INF/jsp/panel/editor.jsp").forward(req, resp);
-    }
-
+@WebServlet("/api/modify-notice-category")
+public class ModifyNoticeCategoryAPIServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         BufferedReader reader = req.getReader();
@@ -27,14 +20,14 @@ public class AddNoticeServlet extends HttpServlet {
 //        System.out.println(json);
         reader.close();
 
-        AddNoticeService service = new AddNoticeService();
-
-        if (service.addNotice(json) == 1) {
+        ModifyNoticeCategoryAPIService service = new ModifyNoticeCategoryAPIService();
+        if (service.modifyNoticeCategory(json) == 1) {
             PrintWriter out = resp.getWriter();
             out.write("{\"res\":\"failed\"}");
             out.close();
             return;
         }
+
 //        返回json
         PrintWriter out = resp.getWriter();
         out.write("{\"res\":\"ok\"}");
