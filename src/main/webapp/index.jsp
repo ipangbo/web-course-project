@@ -77,7 +77,7 @@
         <div class="model-box">
             <div class="model-box-header">
                 <i class="mdui-icon material-icons">fiber_new</i>
-                <span class="model-label">计科新闻</span>
+                <span class="model-label">新闻公告</span>
                 <span><a href="contents/news" id="news-more-button">进入新闻网</a></span>
             </div>
             <div class="horizon"></div>
