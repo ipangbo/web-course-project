@@ -44,7 +44,7 @@
         </a>
         <a href="panel?page=notice">
             <li class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-content">公告管理</div>
+                <div class="mdui-list-item-content">通知管理</div>
                 <i class="mdui-list-item-icon mdui-icon material-icons"
                 >notifications</i
                 >

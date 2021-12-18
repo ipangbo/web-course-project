@@ -17,9 +17,9 @@ public class NoticeArticleServlet extends HttpServlet {
         int aid = Integer.parseInt(req.getParameter("aid"));
 
         GetNoticeDetailService service = new GetNoticeDetailService();
-        NoticeArticle news = service.getNoticeDetailService(aid);
+        NoticeArticle notice = service.getNoticeDetailService(aid);
 
-        req.setAttribute("article", news);
-        req.getRequestDispatcher("/WEB-INF/jsp/article.jsp").forward(req, resp);
+        req.setAttribute("article", notice);
+        req.getRequestDispatcher("/WEB-INF/jsp/notice.jsp").forward(req, resp);
     }
 }

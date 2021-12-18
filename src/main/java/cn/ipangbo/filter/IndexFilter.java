@@ -26,6 +26,7 @@ public class IndexFilter extends HttpFilter {
         GetTop5Service service = new GetTop5Service();
 
         req.setAttribute("top5News", service.getTop5News());
+        req.setAttribute("top5Notice", service.getTop5Notice());
         chain.doFilter(req, res);
     }
 }

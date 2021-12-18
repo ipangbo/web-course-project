@@ -119,31 +119,22 @@
             <div class="horizon"></div>
             <div class="model-box-content" id="notice-box-content">
                 <ul>
-                    <li>
-                        <span>[教育教学]</span>
-                        <a href="contents/notice/detail?aid=1" class="article-title">关于禁止校外外卖的通告</a>
-                        <span class="article-time">2021-11-27</span>
-                    </li>
-                    <li>
-                        <span>[教育教学]</span>
-                        <a href="contents/notice/detail?aid=1" class="article-title">关于庞礴等14名预备党员同志转正的公示</a>
-                        <span class="article-time">2021-11-26</span>
-                    </li>
-                    <li>
-                        <span>[学术动态]</span>
-                        <a href="contents/notice/detail?aid=1" class="article-title">《正告东北农业大学贴吧》</a>
-                        <span class="article-time">2021-11-25</span>
-                    </li>
-                    <li>
-                        <span>[教育教学]</span>
-                        <a href="contents/notice/detail?aid=1" class="article-title">关于组织学生退出“林大集市”的通知</a>
-                        <span class="article-time">2021-11-24</span>
-                    </li>
-                    <li>
-                        <span>[后勤保障]</span>
-                        <a href="contents/notice/detail?aid=1" class="article-title">关于做好庞礴同学后勤保障工作的要求</a>
-                        <span class="article-time">2021-11-20</span>
-                    </li>
+                    <c:forEach items="${top5Notice}" var="notice">
+                        <li>
+                            <c:if test="${notice.aCategory == 1}">
+                                <c:set var="category" value="教育教学"> </c:set>
+                            </c:if>
+                            <c:if test="${notice.aCategory == 2}">
+                                <c:set var="category" value="学术动态"> </c:set>
+                            </c:if>
+                            <c:if test="${notice.aCategory == 3}">
+                                <c:set var="category" value="后勤保障"> </c:set>
+                            </c:if>
+                            <span>[${category}]</span>
+                            <a href="contents/notice/article?aid=${notice.aid}" class="article-title">${notice.aTitle}</a>
+                            <span class="article-time"><fmt:formatDate pattern="yyyy-MM-dd" value="${notice.aCreateTime}"/></span>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
 

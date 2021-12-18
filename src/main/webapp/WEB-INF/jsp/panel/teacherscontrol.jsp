@@ -88,7 +88,7 @@
                 <input type="checkbox"/>
                 <i class="mdui-checkbox-icon"></i>
             </div>
-            <div class="mdui-list-item-content">只有新闻管理界面有实质功能</div>
+            <div class="mdui-list-item-content">只有新闻管理和通知管理界面有实质功能</div>
             <button
                     class="
               mdui-btn mdui-btn-icon mdui-ripple

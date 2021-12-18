@@ -9,15 +9,15 @@ import java.util.List;
 public class NoticeService {
     private NoticeDao dao = new NoticeDaoImpl();
 
-    public List<NoticeArticle> getAllZHXWArticles() {
+    public List<NoticeArticle> getAllJYJXArticles() {
         return dao.listAllNoticeForFrontEnd(1);
     }
 
-    public List<NoticeArticle> getAllDTSYArticles() {
+    public List<NoticeArticle> getAllXSDTArticles() {
         return dao.listAllNoticeForFrontEnd(2);
     }
 
-    public List<NoticeArticle> getAllXMJXArticles() {
+    public List<NoticeArticle> getAllHQBZArticles() {
         return dao.listAllNoticeForFrontEnd(3);
     }
 
