@@ -115,7 +115,7 @@ $("#search-button").on('click', () => {
             </a>
         </div>`;// html结束
                 }
-                $("#article-list").prepend(listItem);
+                $("#article-list").append(listItem);
 
             });
             // 为删除按钮绑定删除事件
