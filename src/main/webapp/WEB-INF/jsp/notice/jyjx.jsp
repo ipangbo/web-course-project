@@ -53,7 +53,7 @@
             <ul>
                 <c:forEach items="${allNews}" var="article">
                     <li>
-                        <a href="contents/news/article?aid=${article.aid}" class="title">${article.aTitle}</a>
+                        <a href="contents/notice/article?aid=${article.aid}" class="title">${article.aTitle}</a>
                         <div class="article-detail-box">
                             <div class="article-abstract">
                                     ${article.aAbstractHTML}
