@@ -36,9 +36,6 @@ public interface NoticeDao {
     // 用于在前台中列出所有的新闻
     public List<NoticeArticle> listAllNoticeForFrontEnd(int category);
 
-    // 用于在后台搜索
-    public List<NoticeArticle> search(int category, String key, boolean isSearchTitleOnly);
-
     // 获取单个新闻的全部信息
     public NoticeArticle querySingleNotice(int aid);
 

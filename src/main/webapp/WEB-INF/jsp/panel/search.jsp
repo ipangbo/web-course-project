@@ -75,9 +75,9 @@
         </div>
         <div class="search-condition-box">
             <select class="mdui-select" id="category-select" mdui-select>
-                <option value="0">全部</option>
-                <option value="1" selected>新闻网</option>
-                <option value="2" disabled>通知公告</option>
+                <option value="0" selected>全部</option>
+                <option value="1">新闻网</option>
+                <option value="2">通知公告</option>
                 <option value="3" disabled>教师队伍</option>
             </select>
             <label class="mdui-checkbox">

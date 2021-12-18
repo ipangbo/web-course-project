@@ -217,55 +217,6 @@ public class NewsDaoImpl implements NewsDao {
     }
 
     @Override
-    public List<NewsArticle> search(int category, String key, boolean isSearchTitleOnly) {
-        // 编写sql语句
-        String sql = "";
-        String tableName = "NEWS";
-        switch (category) {
-            case 0:
-                tableName = "NEWS";
-                break;
-            case 1:
-                tableName = "NEWS";
-                break;
-            case 2:
-                tableName = "NOTICE";
-                break;
-            case 3:
-                tableName = "TEACHERS";
-                break;
-        }
-        if (isSearchTitleOnly) {
-            sql = "SELECT AID, ATITLE, ACATEGORY FROM " + tableName + " WHERE ATITLE LIKE ?";
-        } else {
-            sql = "SELECT AID, ATITLE, ACATEGORY FROM " + tableName + " WHERE ATITLE LIKE ? OR ACONTENTJSON LIKE ?";
-        }
-
-        // 执行sql查询，完成业务逻辑
-        NewsArticle news = null;
-        List<NewsArticle> articleList = new ArrayList<>();
-        try (Connection conn = DataSourceUtils.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql)) {
-            st.setString(1, "%" + key + "%");
-            if (!isSearchTitleOnly) {
-                st.setString(2, "%" + key + "%");
-            }
-            try (ResultSet rs = st.executeQuery()) {
-                while (rs.next()) {
-                    news = new NewsArticle();
-                    news.setAid(rs.getInt(1));
-                    news.setaTitle(rs.getString(2));
-                    news.setaCategory(rs.getInt(3));
-                    articleList.add(news);
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return articleList;
-    }
-
-    @Override
     public NewsArticle querySingleNews(int aid) {
         NewsArticle news = null;
         String sql = "SELECT AID, ATITLE, AAUTHOR, ACONTENTJSON, ACONTENTHTML, AABSTRACTJSON, AABSTRACTHTML, ACATEGORY, ACREATETIME, AMODIFYTIME FROM NEWS WHERE AID IN (?)";

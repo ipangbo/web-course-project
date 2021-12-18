@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.Date;
 
-public class NewsArticle {
+public class NewsArticle extends Article{
     @JSONField(name = "id")
     private int aid;
     @JSONField(name = "title")
@@ -25,6 +25,9 @@ public class NewsArticle {
     private Date aCreateTime;
     @JSONField(name = "modify-time", format = "yyyy-MM-dd")
     private Date aModifyTime;
+    @JSONField(name = "from")
+    private int from = 1;
+
 
     public int getAid() {
         return aid;
@@ -104,5 +107,13 @@ public class NewsArticle {
 
     public void setaModifyTime(Date aModifyTime) {
         this.aModifyTime = aModifyTime;
+    }
+
+    public int getFrom() {
+        return from;
+    }
+
+    public void setFrom(int from) {
+        this.from = from;
     }
 }

@@ -1,5 +1,10 @@
 package cn.ipangbo.dao;
 
-public interface UnionDao {
+import cn.ipangbo.entity.Article;
+import cn.ipangbo.entity.NewsArticle;
 
+import java.util.List;
+
+public interface UnionDao {
+    public List<Article> search(int from, String key, boolean isSearchTitleOnly);
 }
