@@ -12,7 +12,7 @@ create table NEWS
     ACREATETIME   TIMESTAMP default CURRENT_TIMESTAMP                             not null,
     AMODIFYTIME   TIMESTAMP default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP not null,
     ATYPE         INT       default 1,
-    constraint NOTICE_pk
+    constraint NEWS_pk
         primary key (AID)
 );
 
