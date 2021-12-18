@@ -152,7 +152,7 @@
                         <div class="link-title">气势磅礴</div>
                     </li>
                 </a>
-                    <a href="https://web.ab-in.cn/cst/index" target="_blank">
+                    <a href="https://web.ab-in.cn" target="_blank">
                         <li>
                             <i class="mdui-icon material-icons">supervisor_account</i>
                             <div class="link-title">刘思远同学</div>
