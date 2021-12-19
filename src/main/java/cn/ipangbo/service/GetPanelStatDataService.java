@@ -54,6 +54,6 @@ public class GetPanelStatDataService {
         res.add(data);
 
         String jsonOutput = JSON.toJSONString(res);
-        return  jsonOutput;
+        return jsonOutput;
     }
 }
